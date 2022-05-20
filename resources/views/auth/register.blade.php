@@ -52,7 +52,6 @@
                     required>
                     <option value="user">Renter</option>
                     <option value="owner">Property Owner</option>
-
                 </select>
             </div>
 
