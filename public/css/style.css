@@ -1,0 +1,1663 @@
+* {
+	margin: 0;
+	padding: 0;
+	transition: 0.2s;
+}
+
+body {
+	background: #F4F4F4;
+}
+
+.wrap {
+	max-width: 100%;
+	display: block;
+	margin: 0 auto;
+
+
+}
+
+.container {
+	max-width: 1196px;
+
+}
+
+button:focus {
+	outline: 0;
+}
+
+a:focus {
+	outline: 0;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+	color: unset;
+	text-decoration: none;
+	background-color: unset;
+}
+
+
+/* logo */
+
+.bg-logo {
+	background-color: #fff;
+	box-shadow: 0px 10px 10px #EDEDEDDE;
+	padding: 0px 20px;
+	position: relative;
+}
+
+.bg-logo .logo-img img {
+	width: 135px;
+	height: 101px;
+}
+
+/* account-manage */
+.bg-logo .head-cover {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.bg-logo .account-mng .AcBtn {
+	background-color: transparent;
+	border: 1px solid transparent;
+	padding: .375rem .75rem;
+	color: #363E44;
+	font-size: 1rem;
+	font-family: "AnyConv.com__AvenirLTStd-Black";
+
+}
+
+.bg-logo .account-mng .active-clr.AcBtn {
+	color: #5A6B78;
+}
+
+.bg-logo .account-mng .dropdown-toggle::after {
+	display: inline-block;
+	margin-left: .255em;
+	vertical-align: unset;
+	content: url(../img/Arrow.svg);
+	border-top: 0;
+	border-right: 0;
+	border-bottom: 0;
+	border-left: 0;
+	transition: .4s cubic-bezier(.68, -.55, .265, 1.55);
+}
+
+.bg-logo .account-mng .toggle-arrow.dropdown-toggle::after {
+	transform: rotate(180deg);
+}
+
+
+.bg-logo .account-mng .dropdown-menus {
+	position: absolute;
+	top: 65px;
+	right: 15px;
+	z-index: 1000;
+	float: left;
+	min-width: 10rem;
+	padding: .5rem 0;
+	margin: .125rem 0 0;
+	margin-top: 0.125rem;
+	margin-left: 0px;
+	font-size: 1rem;
+	color: #212529;
+	text-align: left;
+	list-style: none;
+	background-color: #fff;
+	background-clip: padding-box;
+	border-radius: .25rem;
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+	border: 1px solid rgba(170, 170, 170, 0.15);
+	box-shadow: 0px 5px 10px rgba(170, 170, 170, 0.15);
+	margin-left: -36px;
+	margin-top: 10px;
+	opacity: 0;
+	transform: scaleY(0);
+	transform-origin: top;
+	transition: .4s cubic-bezier(.68, -.55, .265, 1.55);
+
+}
+
+.bg-logo .account-mng .showdp.dropdown-menus {
+	opacity: 1;
+	transform: scaleY(1);
+}
+
+.bg-logo .account-mng .dropdown-item {
+	color: #363E44;
+	padding: 12px 16px;
+}
+
+.bg-logo .listing-item {
+	position: absolute;
+	left: 30%;
+	top: 60px;
+}
+
+.bg-logo .listing-item a {
+	color: #363E44;
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+	text-decoration: none;
+	padding-bottom: 15px;
+}
+
+.bg-logo .listing-item.active a {
+	border-bottom: 3px solid #C4C4C4;
+}
+
+
+.bg-logo .listing-item a:hover {
+	color: #4E6B81;
+}
+
+
+
+
+
+
+
+
+/* log-in,Create-an-account,Forget-Password section  */
+
+.form-sec {
+	max-width: 380px;
+	padding: 12% 0 0;
+	margin: 0 auto;
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+	display: block;
+	font-style: normal;
+	font-weight: normal;
+}
+
+.form-sec.formcreat {
+	max-width: 800px;
+}
+
+.form-sec .form-title {
+	text-align: center;
+	font-size: 24px;
+	color: #363E44;
+}
+
+.form-sec label {
+	display: inline-block;
+	margin-bottom: .5rem;
+	margin-top: 20px;
+	color: #363E44;
+}
+
+.form-sec .form-control {
+	padding: 22px 10px;
+}
+
+.form-sec .Reset-Pass {
+	color: #363E44;
+	text-align: right;
+	display: block;
+	margin-top: 10px;
+	text-decoration: none;
+}
+
+.form-sec .Reset-Pass:focus {
+	outline: 0;
+	box-shadow: 0;
+}
+
+.form-sec .Reset-Pass:hover {
+	color: #4E6B81;
+}
+
+.form-sec .btn {
+	color: #fff;
+	text-align: center;
+	padding: 8px 10px;
+	font-size: 18px;
+	margin-top: 20px;
+	border-radius: .25rem;
+	background: #3576B1;
+	display: block;
+	width: 100%;
+	transition: 0.3s ease;
+}
+
+.form-sec .formcreatebtn {
+	max-width: 380px;
+	margin: 0 auto;
+	display: block;
+}
+
+.form-sec .btn:hover {
+	box-shadow: 0px 1px 10px #3576B1;
+}
+
+.form-sec .manage-Account {
+	color: #363E44;
+	font-size: 18px;
+	text-align: center;
+	margin-top: 28px;
+}
+
+.form-sec .manage-Account .manage-me {
+	font-family: "AnyConv.com__AvenirLTStd-Black";
+	color: #363E44;
+	text-decoration: none;
+}
+
+.form-sec .manage-Account .manage-me:focus {
+	outline: 0;
+	box-shadow: 0;
+}
+
+.form-sec .manage-Account .manage-me:hover {
+	color: #6A737A;
+}
+
+.form-sec .reset-email-sent {
+	color: #3576B1;
+	font-size: 17px;
+	line-height: 22px;
+	text-align: center;
+	margin-top: 19px;
+	padding: 0px 57px;
+}
+
+.form-sec .form-control.email-sent {
+	color: #72787C;
+	pointer-events: none;
+}
+
+
+
+/* Account Details section */
+
+
+.bg-AccDetails {
+	margin-top: 4rem;
+	margin-bottom: 3rem;
+}
+
+.bg-AccDetails .AccDetails-title {
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+	font-size: 22px;
+	color: #363E44;
+}
+
+.bg-AccDetails .Account-Details {
+	background-color: #fff;
+	padding: 1px 0px 35px 70px;
+	box-shadow: 0px 0px 10px #e6e6e6;
+	margin-bottom: 30px;
+}
+
+.bg-AccDetails .Account-Details .details-title {
+	color: #363E44;
+	font-family: "AnyConv.com__AvenirLTStd-Black";
+	font-size: 15px;
+	margin-top: 35px;
+}
+
+
+.bg-AccDetails .Account-Details label {
+	color: #363E44;
+	font-size: 15px;
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+}
+
+.bg-AccDetails .Account-Details .form-control {
+	display: block;
+	width: 100%;
+	height: calc(1.5em + .75rem + 2px);
+	padding: 22px 40px;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #495057;
+	background-color: #E5E5E5;
+	background-clip: padding-box;
+	border: 0;
+	border-radius: 6px;
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+}
+
+.bg-AccDetails .Account-Details #pro-img {
+	display: none;
+}
+
+.bg-AccDetails .Account-Details .proimge {
+	border: 2px solid #3576B1DE;
+	color: #3576B1;
+	background: #fff;
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+	padding: 10px 5px;
+	border-radius: 7px;
+	font-size: 16px;
+	transition: 0.3s ease;
+	cursor: pointer;
+	width: 100%;
+	text-align: center;
+}
+
+
+.bg-AccDetails .Account-Details .fr-btn {
+	color: #fff;
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+	text-align: center;
+	padding: 10px 22px;
+	font-size: 15px;
+	margin-top: 40px;
+	border-radius: .25rem;
+	background: #3576B1;
+	border: 1px solid transparent;
+	display: block;
+	transition: 0.3s ease;
+	transform: translateX(-50%);
+}
+
+.bg-AccDetails .Account-Details .fr-btn:hover {
+	box-shadow: 0px 1px 10px #3576B1;
+}
+
+.bg-AccDetails .Account-Details .fr-btn.tgl-button {
+	background: unset;
+	box-shadow: unset;
+	color: #3576B1;
+}
+
+
+.bg-AccDetails .Account-Details .nice-select.form-control {
+	background: #FFFFFF;
+	border: 2px solid #E5E5E5;
+}
+
+.bg-AccDetails .Account-Details .nice-select2.form-control {
+	background: #E5E5E5;
+	border: 0px solid transparent;
+}
+
+
+.bg-AccDetails .Account-Details .current {
+	position: absolute;
+	left: 40px;
+	top: 13px;
+}
+
+.nice-select::after {
+	border-bottom: 0;
+	border-right: 0;
+	content: url(../img/Arrow.svg);
+	right: 18px;
+	top: 26%;
+	-webkit-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	transform: rotate(0deg);
+}
+
+
+.nice-select.open::after {
+	-webkit-transform: rotate(-180deg);
+	-ms-transform: rotate(-180deg);
+	transform: rotate(-180deg);
+	top: 50%;
+}
+
+
+
+/* My Listings section */
+
+.bg-mylisting {
+	margin-top: 4rem;
+	margin-bottom: 3rem;
+}
+
+.bg-mylisting .mylist-title {
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+	white-space: nowrap;
+}
+
+.bg-mylisting .nice-select .current {
+	position: absolute;
+	left: 18px;
+	top: 13px;
+}
+.bg-mylisting .nice-select.dist .current {
+	position: absolute;
+	left: 7px;
+	top: 18px;
+	font-size: 10.5px;
+}
+.bg-mylisting .nice-select.form-control {
+	display: block;
+	width: 100%;
+	height: calc(1.5em + .75rem + 2px);
+	padding: 22px 40px;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #495057;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #E5E5E5;
+	border-radius: 6px;
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+}
+
+.bg-mylisting .nice-select .list {
+	box-shadow: 0 1px 0 1px rgba(68, 68, 68, 0.11);
+	margin-top: -5px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	width: 100%;
+}
+
+.bg-mylisting .form-control:focus {
+	box-shadow: 0 0 0 .2rem transparent;
+}
+
+.bg-mylisting .nice-select2.nice-select::after {
+	content: url(../img/Arrow2.svg);
+}
+
+
+.bg-mylisting .nice-select.nice-select2.form-control {
+	color: #3576B1;
+	border: 1px solid #3576B1;
+}
+
+.bg-mylisting .nice-select.nice-select2 .list {
+	box-shadow: 0 0.6px 0 1px #3576B1DE;
+}
+
+.bg-mylisting .createme {
+	color: #fff;
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+	text-align: center;
+	padding: 10px 22px;
+	font-size: 15px;
+	border-radius: .25rem;
+	background: #3576B1;
+	text-decoration: none;
+	border: 1px solid transparent;
+	display: block;
+	transition: 0.3s ease;
+
+}
+
+.bg-mylisting .createme:hover {
+	box-shadow: 0px 1px 10px #3576B1;
+}
+
+
+/* Edit listing */
+
+
+.bg-edit-list {
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+}
+
+.bg-edit-list .cover-edit-list {
+	padding: 30px 10px 15px 30px;
+	background-color: #fff;
+	margin-bottom: 2rem;
+}
+
+.bg-edit-list .cover-ed {
+	max-width: 42rem;
+	display: flex;
+	justify-content: unset;
+	align-items: center;
+}
+.bg-edit-list .edit-details{
+	width: 100%;
+}
+.bg-edit-list .list-img {
+	position: relative;
+	max-width: 160px;
+	margin-right: 50px;
+}
+.bg-edit-list .list-img img {
+	width: 100%;
+}
+
+.bg-edit-list .list-img .list-tag {
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+	max-width: 52px;
+	font-size: 12px;
+	line-height: 15px;
+	background-color: #D0E2F2;
+	padding: 4px 8px;
+	height: 34px;
+	position: absolute;
+	right: 0;
+	bottom: 25px;
+}
+
+.bg-edit-list .edit-list-title {
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+	margin-top: 10px;
+	font-size: 15px;
+}
+
+
+.bg-edit-list .edit-details p span {
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+	padding-right: 5px;
+	padding-left: 5px;
+	border-right: 2px solid #d5d1d18c;
+}
+
+.bg-edit-list .edit-details p span:last-child {
+	border-right: 0px solid #d5d1d18c;
+}
+
+
+.bg-edit-list .edit-details .c-edit a {
+	font-family: "AnyConv.com__AvenirLTStd-Black";
+	text-decoration: underline;
+	color: #3576B1;
+	font-size: 15px;
+}
+
+.bg-edit-list .edit-details .c-edit a:hover {
+	color: #456989;
+}
+
+.bg-edit-list .edit-details .c-edit p {
+	font-family: "AnyConv.com__AvenirLTStd-Black";
+	margin-bottom: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+	color: #474F54;
+}
+
+
+.bg-edit-list .edit-details p.listing-title a {
+	color: #474F54;
+	text-decoration: none;
+}
+
+
+
+
+/* Listing Page section */
+
+.bg-Listing-Page {
+	margin-top: 4rem;
+	margin-bottom: 3rem;
+}
+
+.bg-Listing-Page .Listing-Page-title {
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+	font-size: 22px;
+	color: #363E44;
+}
+
+.bg-Listing-Page .slider-cover {
+	display: block;
+	margin: 0 auto;
+	max-width: 700px;
+	margin-top: 2.5rem;
+}
+
+.bg-Listing-Page .slider-cover .carousel-control-prev-icon {
+	background-image: url("../img/left-arrow.svg");
+}
+
+.bg-Listing-Page .slider-cover .carousel-control-next-icon {
+	background-image: url("../img/right-arrow.svg");
+}
+
+.bg-Listing-Page .slider-cover .carousel-control-next,
+.carousel-control-prev {
+	top: 50%;
+	width: 35px;
+	bottom: unset;
+}
+
+.bg-Listing-Page .slider-cover .carousel-control-prev {
+	left: -10%;
+}
+
+.bg-Listing-Page .slider-cover .carousel-control-next {
+	right: -10%;
+}
+
+.bg-Listing-Page .Listing-Page .cover-lists {
+	background-color: #fff;
+	padding: 30px 22px;
+	border-radius: 4px;
+	box-shadow: 0px 0px 10px #ebebeb;
+}
+
+.bg-Listing-Page .listing-tilte {
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+	font-size: 20px;
+	margin-bottom: 4px;
+}
+
+.bg-Listing-Page p {
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+	margin-bottom: 4px;
+	font-size: 14px;
+}
+
+.bg-Listing-Page .cetag span {
+	border-right: 2px solid #d5d1d18c;
+	padding-right: 7px;
+	/* padding-left: 7px; */
+}
+
+.bg-Listing-Page .cetag span:last-child {
+	border-right: 0px;
+}
+
+/* .bg-Listing-Page .cetag span:first-child{
+	padding-left: 0px;
+} */
+
+.bg-Listing-Page .account-info img {
+	width: 75px;
+	border-radius: 100px;
+	margin-bottom: 5px;
+}
+
+.bg-Listing-Page .account-info .acc-btn {
+	border: 2px solid #3576B1DE;
+	color: #3576B1;
+	background: #fff;
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+	padding: 6px 32px;
+	border-radius: 10px;
+	font-size: 15px;
+	transition: 0.4s;
+}
+
+.bg-Listing-Page .account-info .acc-btn:hover {
+	box-shadow: 0px 0px 10px #38648C7A
+}
+
+.bg-Listing-Page .details-info {
+	display: flex;
+	padding: 3px 0px;
+}
+
+.bg-Listing-Page .details-info p {
+	margin-bottom: 0;
+}
+
+.bg-Listing-Page .details-info .cetag-name {
+	width: 105px;
+	margin-right: 10px;
+}
+
+.bg-Listing-Page .details-info .cetag-info {
+	width: 210px;
+}
+
+
+.bg-Listing-Page .fa-items h5 {
+	display: block;
+	text-align: center;
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+	margin-top: 14px;
+	font-size: 18px;
+	border-bottom: 4px solid transparent;
+	transition: 0.1s;
+	cursor: pointer;
+}
+
+.bg-Listing-Page .activebdr {
+	border-bottom: 4px solid #3576B1;
+
+}
+
+.bg-Listing-Page .forbdr1 {
+	border-bottom: 4px solid #3576B1;
+}
+
+.bg-Listing-Page .forbdr {
+	border-bottom: 4px solid #3576B1;
+}
+
+
+.bg-Listing-Page .fa-items .fa-cetag {
+	display: flex;
+	max-width: 177px;
+	margin: 0 auto;
+}
+
+.bg-Listing-Page .fa-items p {
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+.bg-Listing-Page .fa-items .fa-cetag .cv-icon img {
+	margin-right: 10px;
+}
+
+
+
+
+
+/* Create Listing section */
+
+.bg-create-listing {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.bg-create-listing .multisteps-form__title {
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+	font-size: 22px;
+	color: #363E44;
+}
+
+
+.bg-create-listing .multisteps-form__progress {
+	margin-top: 70px;
+	/* display: flex;
+     justify-content: space-between; */
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+	pointer-events: none;
+
+}
+
+.bg-create-listing .multisteps-form__progress-btn {
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+
+	-webkit-transition-property: all;
+	transition-property: all;
+	-webkit-transition-duration: 0.15s;
+	transition-duration: 0.15s;
+	-webkit-transition-timing-function: linear;
+	transition-timing-function: linear;
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+	position: relative;
+	padding-bottom: 25px;
+	color: #363E44;
+	border: none;
+	background-color: transparent;
+	outline: none !important;
+	cursor: pointer;
+	font-size: 17px;
+}
+
+/* @media (min-width: 500px) {
+	.bg-create-listing .multisteps-form__progress-btn {
+		text-indent: 0;
+	}
+} */
+
+.bg-create-listing .multisteps-form__progress-btn::before {
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	display: block;
+	width: 13px;
+	height: 13px;
+	content: '';
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	-webkit-transition: all 0.15s linear 0s, -webkit-transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
+	transition: all 0.15s linear 0s, -webkit-transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
+	transition: all 0.15s linear 0s, transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
+	transition: all 0.15s linear 0s, transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s, -webkit-transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
+	border: 1px solid #3576B1;
+	border-radius: 50%;
+	background-color: #fff;
+	box-sizing: border-box;
+	z-index: 3;
+}
+
+.bg-create-listing .multisteps-form__progress-btn::after {
+	position: absolute;
+	top: 36px;
+	left: calc(-50% - 13px / 2);
+	-webkit-transition-property: all;
+	transition-property: all;
+	-webkit-transition-duration: 0.15s;
+	transition-duration: 0.15s;
+	-webkit-transition-timing-function: linear;
+	transition-timing-function: linear;
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+	display: block;
+	width: 100%;
+	height: 1px;
+	content: '';
+	background-color: #e3e2e2;
+	z-index: 1;
+}
+
+.bg-create-listing .multisteps-form__progress-btn:first-child:after {
+	display: none;
+}
+
+.bg-create-listing .multisteps-form__progress-btn.js-active {
+	color: #363E44;
+}
+
+.bg-create-listing .multisteps-form__progress-btn.js-active:before {
+	-webkit-transform: translateX(-50%) scale(1.2);
+	transform: translateX(-50%) scale(1.2);
+	background-color: #3576B1;
+}
+
+.bg-create-listing .multisteps-form__form {
+	position: relative;
+}
+
+.bg-create-listing .multisteps-form__panel {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.bg-create-listing .multisteps-form__panel.js-active {
+	height: auto;
+	opacity: 1;
+	visibility: visible;
+}
+
+.bg-create-listing .multisteps-form__panel[data-animation="scaleOut"] {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.bg-create-listing .multisteps-form__panel[data-animation="scaleOut"].js-active {
+	-webkit-transition-property: all;
+	transition-property: all;
+	-webkit-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+	-webkit-transition-timing-function: linear;
+	transition-timing-function: linear;
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.bg-create-listing .multisteps-form__panel[data-animation="slideHorz"] {
+	left: 50px;
+}
+
+.bg-create-listing .multisteps-form__panel[data-animation="slideHorz"].js-active {
+	-webkit-transition-property: all;
+	transition-property: all;
+	-webkit-transition-duration: 0.25s;
+	transition-duration: 0.25s;
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1.13, 0.38, 1.43);
+	transition-timing-function: cubic-bezier(0.2, 1.13, 0.38, 1.43);
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+	left: 0;
+}
+
+.bg-create-listing .multisteps-form__panel[data-animation="slideVert"] {
+	top: 30px;
+}
+
+.bg-create-listing .multisteps-form__panel[data-animation="slideVert"].js-active {
+	-webkit-transition-property: all;
+	transition-property: all;
+	-webkit-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+	-webkit-transition-timing-function: linear;
+	transition-timing-function: linear;
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+	top: 0;
+}
+
+.bg-create-listing .multisteps-form__panel[data-animation="fadeIn"].js-active {
+	-webkit-transition-property: all;
+	transition-property: all;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-timing-function: linear;
+	transition-timing-function: linear;
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+.bg-create-listing .multisteps-form__panel[data-animation="scaleIn"] {
+	-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+}
+
+.bg-create-listing .multisteps-form__panel[data-animation="scaleIn"].js-active {
+	-webkit-transition-property: all;
+	transition-property: all;
+	-webkit-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+	-webkit-transition-timing-function: linear;
+	transition-timing-function: linear;
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+
+
+
+
+.bg-create-listing .multisteps-form__content {
+	background-color: #fff;
+	padding: 32px 0px 35px 70px;
+	box-shadow: 0px 0px 10px #e6e6e6;
+	margin-bottom: 30px;
+}
+
+.bg-create-listing .multisteps-form__content p {
+	color: #363E44;
+	font-size: 15px;
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+}
+
+.bg-create-listing .multisteps-form__content label {
+	color: #363E44;
+	font-size: 15px;
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+	display: block;
+}
+
+.bg-create-listing .multisteps-form__content .white-spce {
+	white-space: nowrap;
+}
+
+
+
+.bg-create-listing .multisteps-form__content .form-control {
+	display: block;
+	width: 100%;
+	height: calc(1.5em + .75rem + 2px);
+	padding: 22px 40px;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 1.5;
+	background: #FFFFFF;
+	border: 2px solid #E5E5E5;
+	background-clip: padding-box;
+	border-radius: 6px;
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+}
+
+.bg-create-listing .multisteps-form__content.setloc .form-control {
+	background-color: #E5E5E5;
+	border: 2px solid #E5E5E5;
+
+}
+
+.bg-create-listing .multisteps-form__content .current {
+	position: absolute;
+	left: 40px;
+	top: 11px;
+}
+
+.bg-create-listing .multisteps-form__content .dist-create .current {
+	position: absolute;
+	left: 12px;
+	top: 17px;
+	font-size: 12px;
+}
+
+
+
+.bg-create-listing .multisteps-form__content .nxt-btn {
+	color: #fff;
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+	text-align: center;
+	padding: 10px 50px;
+	font-size: 16px;
+	border-radius: 7px;
+	background: #3576B1;
+	border: 1px solid #3576B1;
+	display: block;
+	transition: 0.3s ease;
+	transform: translateX(-15%);
+}
+
+.bg-create-listing .multisteps-form__content .nxt-btn:hover {
+	box-shadow: 0px 1px 10px #3576B1;
+}
+
+
+.bg-create-listing .multisteps-form__content .save-btn {
+
+	border: 2px solid #3576B1DE;
+	color: #3576B1;
+	background: #fff;
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+	padding: 10px 50px;
+	margin-right: 36px;
+	border-radius: 7px;
+	font-size: 16px;
+	transition: 0.3s ease;
+
+}
+
+.bg-create-listing .multisteps-form__content .save-btn:hover {
+	box-shadow: 0px 0px 10px #38648C7A;
+}
+
+
+
+.bg-create-listing .multisteps-form__content #r1,
+.bg-create-listing .multisteps-form__content #r2,
+.bg-create-listing .multisteps-form__content #rs1,
+.bg-create-listing .multisteps-form__content #rs2,
+.bg-create-listing .multisteps-form__content #rs3 {
+    display: none;
+}
+.bg-create-listing .multisteps-form__content .lb {
+	border: 2px solid #E5E5E5;
+	color: #ACA7A7;
+	background: #fff;
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+	padding: 10px 5px;
+	border-radius: 7px;
+	font-size: 16px;
+	transition: 0.3s ease;
+	cursor: pointer;
+	width: 100%;
+	text-align: center;
+}
+
+.bg-create-listing .multisteps-form__content input:checked+.lb {
+	border: 2px solid #3576B1DE;
+	color: #3576B1;
+
+}
+
+
+.bg-create-listing .multisteps-form__content .input-group .form-control {
+	width: 50%;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.bg-create-listing .multisteps-form__content .input-group {
+	width: 70%;
+}
+
+
+.bg-create-listing .multisteps-form__content .prepnd .input-group .form-control {
+	width: 50%;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+.bg-create-listing .multisteps-form__content .prepnd .input-group {
+	width: 100%;
+}
+
+
+.bg-create-listing .multisteps-form__content .input-group-text {
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+	background-color: #E5E5E5;
+	border: 1px solid #E5E5E5;
+}
+
+.bg-create-listing .multisteps-form__content hr {
+	border: 1px solid #2e2d2d;
+	width: 23px;
+	margin: 0 auto;
+}
+
+.bg-create-listing .multisteps-form__content #chkbox input {
+	display: none;
+}
+
+.bg-create-listing .multisteps-form__content #chkbox label .ok {
+	width: 28px;
+	height: 26px;
+	display: inline-block;
+	border: 2px solid #D8D8D8;
+	text-align: center;
+	line-height: 20px;
+	margin-right: 6px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.bg-create-listing .multisteps-form__content #chkbox label {
+	margin-top: 12px;
+	display: flex;
+}
+
+
+.bg-create-listing .multisteps-form__content #chkbox label img {
+	opacity: 0;
+}
+
+
+.bg-create-listing .multisteps-form__content #chkbox input:checked+label img {
+	opacity: 1;
+}
+
+.bg-create-listing .multisteps-form__content #v-btn {
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+	font-size: 17px;
+	color: #747475;
+	background-color: transparent;
+	border: 0;
+	transform: translateX(-400%);
+	margin-left: auto;
+	display: block;
+}
+
+.bg-create-listing .multisteps-form__content .viewmore .fdr {
+	border-top: 2px solid #D8D8D8B5;
+	padding-top: 10px;
+}
+
+
+.bg-create-listing .multisteps-form__content .viewmore {
+	opacity: 0;
+	transform: scaleY(0);
+	transform-origin: top;
+	height: 0;
+	transition: .4s cubic-bezier(.68, -.55, .265, 1.55);
+}
+
+.bg-create-listing .multisteps-form__content .viewmore.tgl {
+	opacity: 1;
+	transform: scaleY(1);
+	height: 100%;
+}
+
+
+
+.bg-create-listing .file_up {
+	padding: 30px 40px 28px;
+}
+
+.bg-create-listing .file_up .box img {
+	display: block;
+	margin: 0 auto;
+}
+
+.bg-create-listing .file_up .box {
+	font-size: 1.25rem;
+	text-align: center;
+	position: relative;
+	padding: 70px 20px;
+	cursor: pointer;
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.bg-create-listing .file_up .box.has-advanced-upload {
+	border: 2px solid #E5E5E5;
+	border-radius: 8px;
+	-webkit-transition: outline-offset 0.15s ease-in-out,
+		background-color 0.15s linear;
+	transition: outline-offset 0.15s ease-in-out,
+		background-color 0.15s linear;
+}
+
+.bg-create-listing .file_up p {
+	font-size: 20px;
+	max-width: 300px;
+	line-height: 30px;
+	margin: 25px auto;
+}
+
+.bg-create-listing .file_up label:hover {
+	color: #3576B1;
+	cursor: pointer;
+
+}
+
+
+.bg-create-listing .file_up .box.is-dragover {
+	outline-offset: -20px;
+	outline-color: #c8dadf;
+	background-color: #fff;
+}
+
+.bg-create-listing .file_up .box__dragndrop,
+.bg-create-listing .file_up .box__icon {
+	display: none;
+}
+
+.bg-create-listing .file_up .box.has-advanced-upload .box__dragndrop {
+	display: inline;
+}
+
+.bg-create-listing .file_up .box.has-advanced-upload .box__icon {
+	width: 100%;
+	height: 80px;
+	fill: #92b0b3;
+	display: block;
+	margin-bottom: 40px;
+}
+
+.bg-create-listing .file_up .box.is-uploading .box__input,
+.bg-create-listing .file_up .box.is-success .box__input,
+.bg-create-listing .file_up .box.is-error .box__input {
+	visibility: hidden;
+}
+
+.bg-create-listing .file_up .box__uploading,
+.bg-create-listing .file_up .box__success,
+.bg-create-listing .file_up .box__error {
+	display: none;
+}
+
+.bg-create-listing .file_up .box.is-uploading .box__uploading,
+.bg-create-listing .file_up .box.is-success .box__success,
+.bg-create-listing .file_up .box.is-error .box__error {
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	left: 0;
+
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.bg-create-listing .file_up .box__uploading {
+	font-style: italic;
+}
+
+.bg-create-listing .file_up .box__success {
+	border: 2px solid #3576B1DE;
+	color: #3576B1;
+	background: #fff;
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+	padding: 10px 50px;
+	margin: 0 auto;
+	border-radius: 7px;
+	font-size: 16px;
+	transition: 0.3s ease;
+	-webkit-animation: appear-from-inside 0.25s ease-in-out;
+	animation: appear-from-inside 0.25s ease-in-out;
+}
+
+@-webkit-keyframes appear-from-inside {
+	from {
+		-webkit-transform: translateY(-50%) scale(0);
+	}
+
+	75% {
+		-webkit-transform: translateY(-50%) scale(1.1);
+	}
+
+	to {
+		-webkit-transform: translateY(-50%) scale(1);
+	}
+}
+
+@keyframes appear-from-inside {
+	from {
+		transform: translateY(-50%) scale(0);
+	}
+
+	75% {
+		transform: translateY(-50%) scale(1.1);
+	}
+
+	to {
+		transform: translateY(-50%) scale(1);
+	}
+}
+
+.bg-create-listing .file_up .box__restart {
+	color: #3576B1;
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+
+}
+
+.bg-create-listing .file_up .box__restart:focus,
+.bg-create-listing .file_up .box__restart:hover {
+	color: #39bfd3;
+}
+
+.bg-create-listing .file_up .js .box__file {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.bg-create-listing .file_up .js .box__file+label {
+	max-width: 80%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	cursor: pointer;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.bg-create-listing .file_up .js .box__file+label:hover strong,
+.bg-create-listing .file_up .box__file:focus+label strong,
+.bg-create-listing .file_up .box__file.has-focus+label strong {
+	color: #39bfd3;
+}
+
+.js .box__file:focus+label,
+.js .box__file.has-focus+label {
+	outline: 1px dotted #000;
+	outline: -webkit-focus-ring-color auto 5px;
+}
+
+.bg-create-listing .file_up .js .box__file+label * {
+	/* pointer-events: none; */
+	/* in case of FastClick lib use */
+}
+
+.bg-create-listing .file_up .no-js .box__file+label {
+	display: none;
+}
+
+.bg-create-listing .file_up .no-js .box__button {
+	display: block;
+}
+
+.bg-create-listing .file_up .box__button {
+	border: 1px solid #4A7397DE;
+	color: #3574AE;
+	background: #fff;
+	display: block;
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+	padding: 10px 50px;
+	margin: 0 auto;
+	border-radius: 7px;
+	font-size: 16px;
+	transition: 0.3s ease;
+	margin-top: 20px;
+	max-width: 158px;
+}
+
+.bg-create-listing .file_up .box__button:hover,
+.bg-create-listing .file_up .box__button:focus {
+	box-shadow: 0px 0px 10px #38648C7A;
+}
+
+
+.bg-create-listing .sumitListing {
+	padding: 30px 40px 28px;
+	height: 400px;
+}
+
+.bg-create-listing .sumitListing p {
+	font-size: 18px;
+	max-width: 745px;
+	margin: 0 auto;
+}
+
+
+.bg-create-listing .sumitListing .subBtn {
+	font-family: "AnyConv.com__AvenirLTStd-Roman";
+	text-align: center;
+	color: #fff;
+	padding: 10px 28px;
+	font-size: 16px;
+	border-radius: 7px;
+	background: #3576B1;
+	border: 1px solid #3576B1;
+	display: block;
+	margin: 0 auto;
+	margin-top: 25px;
+	transition: 0.3s ease;
+
+}
+
+.bg-create-listing .sumitListing .subBtn:hover {
+	box-shadow: 0px 1px 10px #3576B1;
+}
+
+
+
+
+
+
+
+
+/*for responsive
+*/
+
+@media (max-width:992px) {
+	.bg-create-listing .multisteps-form__content {
+		padding: 32px 70px 35px 70px
+	}
+
+	.bg-create-listing .multisteps-form__content .nxt-btn {
+		transform: unset;
+	}
+
+	.bg-create-listing .multisteps-form__content #v-btn {
+		transform: translateX(-200%);
+
+	}
+
+
+}
+
+
+
+
+@media (max-width:930px) {
+	.bg-AccDetails .Account-Details .form-control {
+		padding: 22px 20px;
+	}
+
+	.bg-AccDetails .Account-Details .current {
+		left: 20px;
+	}
+
+	.bg-Listing-Page .slider-cover .carousel-control-prev {
+		left: 25px
+	}
+
+	.bg-Listing-Page .slider-cover .carousel-control-next {
+		right: 25px;
+	}
+
+	.bg-Listing-Page .slider-cover .carousel-control-next,
+	.carousel-control-prev {
+		background: #bdb5b5;
+		padding: 8px 0px;
+		border-radius: 100px;
+	}
+
+
+}
+
+@media (max-width:768px) {
+
+	.bg-logo .listing-item {
+		left: 40%;
+	}
+
+
+	.bg-AccDetails .Account-Details label {
+		margin-bottom: 0;
+	}
+
+	.bg-AccDetails .Account-Details .form-control {
+		margin-top: 18px;
+
+	}
+
+	.bg-AccDetails .Account-Details {
+		padding: 1px 70px 35px 70px;
+	}
+
+	.bg-AccDetails .Account-Details .fr-btn {
+
+		transform: unset;
+	}
+
+	.bg-Listing-Page .account-info .acc-btn {
+		font-size: 14px;
+	}
+
+	.bg-create-listing .multisteps-form__content .lb {
+		font-size: 15px;
+
+	}
+
+	.bg-create-listing .multisteps-form__content .nxt-btn {
+		font-size: 15px;
+		padding: 10px 28px;
+
+	}
+
+	.bg-create-listing .multisteps-form__content .save-btn {
+		font-size: 15px;
+		padding: 10px 28px;
+	}
+
+	.bg-create-listing .multisteps-form__content #v-btn {
+		transform: translateX(-60%);
+	}
+	.bg-mylisting .nice-select.dist .current {
+	position: absolute;
+	left: 7px;
+	top: 17px;
+	font-size: 10.5px;
+}
+
+
+}
+
+@media (max-width:576px) {
+
+
+.bg-logo .listing-item {
+	left: 45%;
+	width: 58px;
+}
+.bg-logo .account-mng {
+	margin-bottom: 0.5rem;
+}
+
+	.form-sec {
+		margin-top: 15px;
+	}
+
+	.form-sec .reset-email-sent {
+		padding: 0px 30px;
+	}
+
+	.bg-logo .account-mng .dropdown-menus {
+		margin-left: -54px;
+		top: 85px;
+	}
+.bg-logo .head-cover {
+	align-items: flex-end;
+}
+	.bg-AccDetails .Account-Details {
+		padding: 1px 35px 35px 35px;
+	}
+
+	.bg-logo .listing-item a {
+		padding-bottom: 9px;
+	}
+
+
+	.bg-edit-list .cover-ed {
+		max-width: 100%;
+		display: block;
+	}
+
+	.edit-details {
+		margin-top: 1.5rem;
+	}
+
+	.bg-edit-list .list-img .list-tag {
+		bottom: 15px;
+	}
+
+	.bg-create-listing .multisteps-form__content {
+		padding: 32px 30px 35px 30px;
+	}
+
+	.bg-create-listing .multisteps-form__content .save-btn {
+		margin-right: 14px;
+
+	}
+
+	.bg-create-listing .multisteps-form__content .input-group {
+		width: 100%;
+	}
+
+	.bg-create-listing .multisteps-form__content .viewmore .nbdr.fdr {
+		border-top: 0px solid #D8D8D8B5;
+		padding-top: 0px;
+	}
+
+	.bg-create-listing .file_up .box {
+		padding: 50px 20px;
+	}
+
+	.bg-create-listing .file_up p {
+		font-size: 16px;
+		max-width: 300px;
+		line-height: 26px;
+		margin: 15px auto;
+	}
+
+	.bg-create-listing .file_up .box__button {
+		padding: 10px 35px;
+	}
+
+	.bg-create-listing .sumitListing p {
+		font-size: 16px;
+
+	}
+}
+
+
+
+
+
+@media (max-width:400px) {
+	.bg-logo {
+		padding: 0px 0px;
+	}
+
+	.bg-logo .account-mng .dropdown-item {
+		font-size: 14px;
+	}
+
+	.bg-logo .listing-item {
+
+		right: 52px;
+
+	}
+
+	.bg-Listing-Page .fa-items h5 {
+		font-size: 16px;
+	}
+
+	.bg-create-listing .multisteps-form__progress-btn {
+		font-size: 15px;
+	}
+
+	.bg-create-listing .multisteps-form__content .save-btn {
+		padding: 10px 13px;
+	}
+}
+.copyright {
+            text-align: center;
+            margin-top: 30px;
+            color: #696969;
+            font-size: 15px;
+            font-family: "AnyConv.com__AvenirLTStd-Roman";
+        }
