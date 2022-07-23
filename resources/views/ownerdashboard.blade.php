@@ -40,6 +40,15 @@
                             </button>
                             <div class="dropdown-menus" id="dpm">
                                 <a class="dropdown-item" href="Account-Details.php">Account Details</a>
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+        
+                                    <x-dropdown-link :href="route('logout')"
+                                            onclick="event.preventDefault();
+                                                        this.closest('form').submit();">
+                                        {{ __('Log Out') }}
+                                    </x-dropdown-link>
+                                </form>
                                 <a class="dropdown-item" href="logout.php">Log Out</a>
                             </div>
                         </div>
