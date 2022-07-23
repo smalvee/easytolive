@@ -2,245 +2,368 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KGD-Property</title>
-    <style>
-        .copyright {
-            text-align: center;
-            margin-top: 30px;
-            color: #696969;
-            font-size: 15px;
-            font-family: "AnyConv.com__AvenirLTStd-Roman";
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Dashboard</title>
 
-    </style>
-    <!-- css files -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/nice-select.css" />
-    <link rel="stylesheet" href="css/font.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" href="img/favicon.png" />
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
 </head>
 
-<body>
-    <!-- logo -->
-    <header>
-        <div class="wrap bg-logo">
-            <div class="container-fluid">
-                <!-- account-manage -->
-                <div class="head-cover">
-                    <div class="logo-img">
-                        <img src="img/logo.png" alt="logo-image">
-                    </div>
-                    <div class="account-mng">
-                        <div class="dropdownse">
-                            <button class="AcBtn dropdown-toggle" type="button" id="dropdownMenuButton">
-                                {{ Auth::user()->name }}
-                            </button>
-                            <div class="dropdown-menus" id="dpm">
-                                <a class="dropdown-item" href="Account-Details.php">Account Details</a>
-                                <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
-        
-                                    <x-dropdown-link :href="route('logout')"
-                                            onclick="event.preventDefault();
-                                                        this.closest('form').submit();">
-                                        {{ __('Log Out') }}
-                                    </x-dropdown-link>
-                                </form>
-                                <a class="dropdown-item" href="logout.php">Log Out</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="listing-item">
-                        <a href="createlisting/{{ Auth::user()->id }}" class="">Listings</a>
-                    </div>
-                </div>
-            </div>
+<body class="hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+
+
+
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+
+      </ul>
+
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto">
+
+
+
+
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a href="index3.html" class="brand-link">
+        <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">KGD</span>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          </div>
+          <div class="info">
+            <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+          </div>
         </div>
-    </header>
 
-    <!-- Account Details section -->
-    <section>
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+            
 
-        <?php
-        use App\Models\AccountDetails;
-        $check = null;
+            <li class="nav-item">
+              <a href="/dashboard" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                Dashboard
+                </p>
+              </a>
+            </li>
 
-        $idt = Auth::user()->id;
+            <li class="nav-item">
+              <a href="profile/{{ Auth::user()->id }}" class="nav-link">
+                <i class="nav-icon far fa-user"></i>
+                <p>
+                  Profile
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/properties/{{ Auth::user()->id }}" class="nav-link">
+              <i class="fa fa-university" aria-hidden="true"></i>
 
-        $account_history = AccountDetails::where('main_id', $idt)->get();
-        ?>
-
-        @foreach ($account_history as $item)
-            <?php $check = $item->main_id; ?>
-        @endforeach
-
-        <div class="wrap bg-AccDetails ">
-            <div class="container ">
-                <h5 class="AccDetails-title">Account Details</h5>
-                <div class="Account-Details">
-                    <h5 class="details-title">Login Information</h5>
-
-                    <div class="row align-items-center my-3">
-                        <div class="col-md-2">
-                            <label for="">Login id </label>
-                        </div>
-                        <div class="col-md-6">
-                            <label type="email"> {{ Auth::user()->email }}</label>
-                        </div>
-                    </div>
-
-                    <h5 class="details-title">Personal Information</h5>
-
-                    @foreach ($account_history as $item)
-                        <div class="row align-items-center my-3">
-                            <div class="col-md-2">
-                                <label for="title">Title </label>
-                            </div>
-                            <div class="col-md-6">
-                                <div>
-                                    <label>{{ $item->title }}</option>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row align-items-center my-3">
-                            <div class="col-md-2">
-                                <label for="">First Name </label>
-                            </div>
-                            <div class="col-md-6">
-                                <label type="text" name="first_name">{{ $item->first_name }}</label>
-                            </div>
-                        </div>
-
-                        <div class="row align-items-center my-3">
-                            <div class="col-md-2">
-                                <label for="">Last Name </label>
-                            </div>
-                            <div class="col-md-6">
-                                <label type="text" name="last_name">{{ $item->last_name }} </label>
-                            </div>
-                        </div>
-                        <h5 class="details-title">Contact Information</h5>
-
-                        <div class="row align-items-center my-3">
-                            <div class="col-md-2">
-                                <label for="">Email Address</label>
-                            </div>
-                            <div class="col-md-6">
-                                <label type="email" name="email"> {{ Auth::user()->email }}</label>
-                            </div>
-                        </div>
-
-                        <div class="row align-items-center my-3">
-                            <div class="col-md-2">
-                                <label for="">Country Code Number </label>
-                            </div>
-                            <div class="col-md-3">
-                                <div>
-                                    <label>{{ $item->country_code }}</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row align-items-center my-3">
-                            <div class="col-md-2">
-                                <label for="">Mobile Phone Number </label>
-                            </div>
-                            <div class="col-md-3">
-                                <label type="text" name="mobile">{{ $item->mobile_number }}</label>
-                            </div>
-                        </div>
+                <p>
+                  Propertys
+                </p>
+              </a>
+            </li>
 
 
-                        <div class="row align-items-center my-3">
-                            <div class="col-md-2">
-                                <label for="">Alternative Phone Number</label>
-                            </div>
-                            <div class="col-md-6">
-                                <label type="text" name="alternative_mobile">{{ $item->alt_number }}</label>
-                            </div>
-                        </div>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-edit"></i>
+                <p>
+                  Forms
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="pages/forms/general.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>General Elements</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="pages/forms/advanced.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Advanced Elements</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="pages/forms/editors.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Editors</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="pages/forms/validation.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Validation</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-table"></i>
+                <p>
+                  Tables
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="pages/tables/simple.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Simple Tables</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="pages/tables/data.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>DataTables</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="pages/tables/jsgrid.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>jsGrid</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-header">EXAMPLES</li>
+            <li class="nav-item">
+              <a href="pages/calendar.html" class="nav-link">
+                <i class="nav-icon far fa-calendar-alt"></i>
+                <p>
+                  Calendar
+                  {{-- <span class="badge badge-info right">2</span> --}}
+                </p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="pages/calendar.html" class="nav-link">
+              <form method="POST" action="{{ route('logout') }}">
+                      @csrf
+                      <i class="fa fa-share-square nav-icon"></i>
+                      <button style="background: transparent; border: transparent; color:beige;">Logout</button>
+                    </form>
+              </a>
+            </li>
+
+          
 
 
 
 
-                        <div class="row align-items-center my-3">
-                            <div class="col-md-2 mb-2 mb-md-0">
-                                <label for="">Profile Picture</label>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                                <img src='../uploads/profile/{{ $item->profile_picture }}' height='150' width='130' class='img-thumnail' alt='profile-img' />
-                            </div>
-                        </div>
-                    @endforeach
-
-                    <?php
-                        if ($check == NULL) { ?>
-
-                    <a href="editprofile/{{ Auth::user()->id }}"><button type="submit" name="submit" id="btns"
-                            class="fr-btn ml-auto">Complete Profile</button></a>
-                    <?php }
-                        else { ?>
-                    <a href="editprofile/{{ Auth::user()->id }}"><button type="submit" name="submit" id="btns"
-                            class="fr-btn ml-auto">Edit Profile</button></a>
-                    <?php }
-                    ?>
 
 
-                    {{-- <a href="editprofile/{{ Auth::user()->id }}"><button type="submit" name="submit" id="btns"
-                            class="fr-btn ml-auto">Edit Profile</button></a> --}}
+
+
+
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0">Owner Dashboard</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+              </ol>
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.content-header -->
+
+
+
+
+
+
+
+      <!-- Main content -->
+      <section class="content">
+        <div class="container-fluid">
+          <!-- Small boxes (Stat box) -->
+          <div class="row">
+            <div class="col-lg-3 col-6">
+              <!-- small box -->
+              <div class="small-box bg-info">
+                <div class="inner">
+                  <h3>150</h3>
+
+                  <p>New Orders</p>
                 </div>
-
+                <div class="icon">
+                  <i class="ion ion-bag"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
             </div>
-            <footer>
-                <p class="copyright">Designed by Webdorks</p>
-            </footer>
-        </div>
-    </section>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+              <!-- small box -->
+              <div class="small-box bg-success">
+                <div class="inner">
+                  <h3>53<sup style="font-size: 20px">%</sup></h3>
+
+                  <p>Bounce Rate</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+              <!-- small box -->
+              <div class="small-box bg-warning">
+                <div class="inner">
+                  <h3>44</h3>
+
+                  <p>User Registrations</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-person-add"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+              <!-- small box -->
+              <div class="small-box bg-danger">
+                <div class="inner">
+                  <h3>65</h3>
+
+                  <p>Unique Visitors</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-pie-graph"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+          </div>
 
 
-    <!-- js files -->
-    <script src="js/popper-1.14.7.min.js"></script>
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap-4.3.1.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script>
-        $(".custom-file-inp").on("change", function() {
-            var fileName = $(this).val().split("\\").pop();
-            $(this).siblings(".custom-file-lab").addClass("selected").html(fileName += ' uploaded');
 
-        });
-
-        // let btnsv = document.getElementById('btns')
-        // btnsv.addEventListener('click', function (e) {
-        //   if (btnsv.innerHTML === 'Save Changes') {
-        //     btnsv.innerHTML = 'Changes Saved'
-        //     btnsv.classList.add('tgl-button')
-        //   }
-        // })
-    </script>
-
-    <script>
-        $(document).ready(function() {
-            $('#submit').click(function() {
+          <!-- /.row -->
+          <!-- Main row -->
 
 
 
-                var extension = $('#pro-img').val().split('.').pop().toLowerCase();
-                if (jQuery.inArray(extension, ['gif', 'png', 'jpg', 'jpeg']) == -1) {
-                    alert('Invalid Image File');
-                    $('#pro-img').val('');
-                    return false;
-                }
+          <!-- /.row (main row) -->
+        </div><!-- /.container-fluid -->
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+      <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+      All rights reserved.
+      <div class="float-right d-none d-sm-inline-block">
+        <b>Version</b> 3.2.0
+      </div>
+    </footer>
 
-            });
-        });
-    </script>
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+  </div>
+  <!-- ./wrapper -->
 
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ChartJS -->
+  <script src="plugins/chart.js/Chart.min.js"></script>
+  <!-- Sparkline -->
+  <script src="plugins/sparklines/sparkline.js"></script>
+  <!-- JQVMap -->
+  <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+  <!-- jQuery Knob Chart -->
+  <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+  <!-- daterangepicker -->
+  <script src="plugins/moment/moment.min.js"></script>
+  <script src="plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- Summernote -->
+  <script src="plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="dist/js/demo.js"></script>
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <script src="dist/js/pages/dashboard.js"></script>
 </body>
 
 </html>

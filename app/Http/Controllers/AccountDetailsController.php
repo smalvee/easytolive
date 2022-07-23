@@ -14,7 +14,7 @@ class AccountDetailsController extends Controller
      */
     public function index($id)
     {
-        return view('owner.editprofile', compact('id'));
+        return view('owner.profile', compact('id'));
     }
 
     /**
@@ -65,9 +65,9 @@ class AccountDetailsController extends Controller
      * @param  \App\Models\AccountDetails  $accountDetails
      * @return \Illuminate\Http\Response
      */
-    public function edit(AccountDetails $accountDetails)
+    public function edit($id)
     {
-        //
+        return view('owner.editprofile', compact('id'));
     }
 
     /**

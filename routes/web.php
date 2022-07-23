@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AccountDetailsController;
 use App\Http\Controllers\CreatelistingController;
+use App\Http\Controllers\PropertyController;
 use App\Models\Createlisting;
 use GuzzleHttp\Middleware;
 
@@ -35,10 +36,15 @@ Route::group(['middleware' => ['auth']], function() {
 
 
 
-Route::get('editprofile/{id}', [AccountDetailsController::class, 'index'])->middleware(['auth']);
+Route::get('profile/{id}', [AccountDetailsController::class, 'index'])->middleware(['auth']);
+Route::get('editprofile/{id}', [AccountDetailsController::class, 'edit'])->middleware(['auth']);
 Route::post('account', [AccountDetailsController::class, 'store'])->middleware(['auth']);
 Route::post('account_update', [AccountDetailsController::class, 'update'])->middleware(['auth']);
 Route::post('account_photo_update', [AccountDetailsController::class, 'profile_photo_update'])->middleware(['auth']);
+
+
+Route::get('addproperty/{id}', [PropertyController::class, 'index'])->middleware(['auth']);
+Route::get('properties/{id}', [PropertyController::class, 'show'])->middleware(['auth']);
 
 
 Route::get('createlisting/{id}', [CreatelistingController::class, 'index'])->middleware(['auth']);
