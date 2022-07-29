@@ -428,52 +428,52 @@
                                                         <label for="customCheckbox5" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
-                                                        <label for="customCheckbox1" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox6" value="option1">
+                                                        <label for="customCheckbox6" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
-                                                        <label for="customCheckbox1" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox7" value="option1">
+                                                        <label for="customCheckbox7" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
-                                                        <label for="customCheckbox1" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox8" value="option1">
+                                                        <label for="customCheckbox8" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6">
                                                 <div class="form-group">
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
-                                                        <label for="customCheckbox1" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox9" value="option1">
+                                                        <label for="customCheckbox9" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
-                                                        <label for="customCheckbox1" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox10" value="option1">
+                                                        <label for="customCheckbox10" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox2" value="option2">
-                                                        <label for="customCheckbox2" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox11" value="option2">
+                                                        <label for="customCheckbox11" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox3" value="option3">
-                                                        <label for="customCheckbox3" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox12" value="option3">
+                                                        <label for="customCheckbox12" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option4">
-                                                        <label for="customCheckbox4" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox13" value="option4">
+                                                        <label for="customCheckbox13" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox5" value="option5">
-                                                        <label for="customCheckbox5" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox14" value="option5">
+                                                        <label for="customCheckbox14" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
-                                                        <label for="customCheckbox1" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox15" value="option1">
+                                                        <label for="customCheckbox15" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
-                                                        <label for="customCheckbox1" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox16" value="option1">
+                                                        <label for="customCheckbox16" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -498,64 +498,64 @@
                                                 <!-- text input -->
                                                 <div class="form-group">
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
-                                                        <label for="customCheckbox1" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox17" value="option1">
+                                                        <label for="customCheckbox17" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox2" value="option2">
-                                                        <label for="customCheckbox2" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox18" value="option2">
+                                                        <label for="customCheckbox18" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox3" value="option3">
-                                                        <label for="customCheckbox3" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox19" value="option3">
+                                                        <label for="customCheckbox19" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option4">
-                                                        <label for="customCheckbox4" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox20" value="option4">
+                                                        <label for="customCheckbox20" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option4">
-                                                        <label for="customCheckbox4" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox21" value="option4">
+                                                        <label for="customCheckbox21" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
-                                                        <label for="customCheckbox1" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox22" value="option1">
+                                                        <label for="customCheckbox22" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox2" value="option2">
-                                                        <label for="customCheckbox2" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox23" value="option2">
+                                                        <label for="customCheckbox23" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox3" value="option3">
-                                                        <label for="customCheckbox3" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox24" value="option3">
+                                                        <label for="customCheckbox24" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option4">
-                                                        <label for="customCheckbox4" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox25" value="option4">
+                                                        <label for="customCheckbox25" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option4">
-                                                        <label for="customCheckbox4" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox26" value="option4">
+                                                        <label for="customCheckbox26" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
-                                                        <label for="customCheckbox1" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox27" value="option1">
+                                                        <label for="customCheckbox27" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox2" value="option2">
-                                                        <label for="customCheckbox2" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox28" value="option2">
+                                                        <label for="customCheckbox28" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox3" value="option3">
-                                                        <label for="customCheckbox3" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox29" value="option3">
+                                                        <label for="customCheckbox29" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option4">
-                                                        <label for="customCheckbox4" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox30" value="option4">
+                                                        <label for="customCheckbox30" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option4">
-                                                        <label for="customCheckbox4" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox31" value="option4">
+                                                        <label for="customCheckbox31" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
 
                                                 </div>
@@ -563,64 +563,64 @@
                                             <div class="col-sm-6">
                                                 <div class="form-group">
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
-                                                        <label for="customCheckbox1" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox32" value="option1">
+                                                        <label for="customCheckbox32" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
-                                                        <label for="customCheckbox1" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox33" value="option1">
+                                                        <label for="customCheckbox33" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox2" value="option2">
-                                                        <label for="customCheckbox2" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox34" value="option2">
+                                                        <label for="customCheckbox34" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox3" value="option3">
-                                                        <label for="customCheckbox3" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox35" value="option3">
+                                                        <label for="customCheckbox35" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox3" value="option3">
-                                                        <label for="customCheckbox3" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox36" value="option3">
+                                                        <label for="customCheckbox36" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
-                                                        <label for="customCheckbox1" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox37" value="option1">
+                                                        <label for="customCheckbox37" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox2" value="option2">
-                                                        <label for="customCheckbox2" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox38" value="option2">
+                                                        <label for="customCheckbox38" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox3" value="option3">
-                                                        <label for="customCheckbox3" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox39" value="option3">
+                                                        <label for="customCheckbox39" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option4">
-                                                        <label for="customCheckbox4" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox40" value="option4">
+                                                        <label for="customCheckbox40" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option4">
-                                                        <label for="customCheckbox4" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox41" value="option4">
+                                                        <label for="customCheckbox41" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1">
-                                                        <label for="customCheckbox1" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox42" value="option1">
+                                                        <label for="customCheckbox42" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox2" value="option2">
-                                                        <label for="customCheckbox2" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox43" value="option2">
+                                                        <label for="customCheckbox43" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox3" value="option3">
-                                                        <label for="customCheckbox3" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox44" value="option3">
+                                                        <label for="customCheckbox44" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option4">
-                                                        <label for="customCheckbox4" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox45" value="option4">
+                                                        <label for="customCheckbox45" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option4">
-                                                        <label for="customCheckbox4" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox46" value="option4">
+                                                        <label for="customCheckbox46" class="custom-control-label">Custom Checkbox</label>
                                                     </div>
 
                                                 </div>

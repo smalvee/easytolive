@@ -73,7 +73,7 @@
             <?php $check = $item->main_id; ?>
             @endforeach
 
-            @foreach ($account_history as $item)
+
             <!-- Main content -->
             <section class="content">
                 <div class="container-fluid">
@@ -84,12 +84,30 @@
                             <div class="card card-primary card-outline">
                                 <div class="card-body box-profile">
                                     <div class="text-center">
+                                        <?php
+                                        if ($check == NULL) { ?>
+                                            <p style="color:red ;">! Please Active the profile first</p>
+                                        <?php }
+                                        ?>
+                                        @foreach ($account_history as $item)
                                         <img class="profile-user-img img-fluid img-circle" src="../uploads/profile/{{ $item->profile_picture }}" alt="User profile picture">
+                                        @endforeach
                                     </div>
 
-                                    <h3 class="profile-username text-center">{{ Auth::user()->name }}</h3>
+                                    <h3 class="profile-username text-center">Nina Mcintire</h3>
 
-                                    
+                                    <p class="text-muted text-center">Software Engineer</p>
+                                    <form action="{{ url('account') }}" method="POST" enctype="multipart/form-data">
+                                        @csrf
+
+                                        <input type="hidden" value="{{ Auth::user()->id }}" name="main_id">
+
+                                        <?php
+                                        if ($check == NULL) { ?>
+                                            <button class="form-control" type="submit" style="background-color:red; color:aliceblue;">Active Profile</button>
+                                        <?php }
+                                        ?>
+                                    </form>
 
 
 
@@ -178,8 +196,9 @@
                                                 </div>
                                             </div>
 
-                                            
+
                                             <!-- /.post -->
+                                            @foreach ($account_history as $item)
                                             <div class="post">
                                                 <div>
                                                     <div>Personal Information</div>
@@ -229,7 +248,7 @@
                                                 </div>
                                             </div>
                                             <!-- Post -->
-                                            
+
 
                                         </div>
                                         <!-- /.tab-pane -->
@@ -240,7 +259,7 @@
                                             <!-- timeline item -->
                                             <form action="{{ url('account_photo_update') }}" method="POST" enctype="multipart/form-data">
                                                 @csrf
-                                            <input type="hidden" name="main_id" value="{{ $item->main_id }}">
+                                                <input type="hidden" name="main_id" value="{{ $item->main_id }}">
                                                 <div class="card-body">
 
                                                     <div class="form-group">
@@ -268,7 +287,7 @@
                                         <!-- /.tab-pane -->
 
                                         <div class="tab-pane" id="settings">
-                                            <form action="{{ url('account_update') }}" method="POST" enctype="multipart/form-data" >
+                                            <form action="{{ url('account_update') }}" method="POST" enctype="multipart/form-data">
                                                 @csrf
                                                 <input type="hidden" value="{{ Auth::user()->id }}" name="main_id">
 
