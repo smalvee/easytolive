@@ -110,7 +110,7 @@
                             if ($check == NULL) { ?>
                         <button type="submit" class="fr-btn ml-auto">Enable Editing</button>
                         <?php }
-                            ?>
+                            ?> 
                     </form>
 
 

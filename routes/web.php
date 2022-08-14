@@ -48,7 +48,7 @@ Route::get('properties/{id}', [PropertyController::class, 'show'])->middleware([
 
 
 Route::get('createlisting/{id}', [CreatelistingController::class, 'index'])->middleware(['auth']);
-Route::get('createlist', [CreatelistingController::class, 'store'])->Middleware(['auth']);
+Route::post('createlist', [CreatelistingController::class, 'store'])->Middleware(['auth']);
 
 
 require __DIR__.'/auth.php';

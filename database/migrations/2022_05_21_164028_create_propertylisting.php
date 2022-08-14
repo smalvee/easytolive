@@ -43,6 +43,7 @@ return new class extends Migration
             $table->string('unit_features')->nullable();
             $table->string('agent_name')->nullable();
             $table->string('agent_number')->nullable();
+            $table->string('image')->nullable();
             $table->string('unique_id')->nullable();
             $table->timestamps();
         });
