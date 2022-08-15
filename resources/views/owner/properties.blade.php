@@ -52,60 +52,119 @@
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
+                    <h5 class="mb-2">Card with Image Overlay</h5>
+
+                    <?php
+
+                    use App\Models\AccountDetails;
+                    use App\Models\Createlisting;
+
+                    $check = null;
+
+                    $idt = Auth::user()->id;
+                    $owner_property_list = Createlisting::where('user_id', $idt)->get();
+                    ?>
+
+
+
+                    @foreach ($owner_property_list as $item)
+                    <!-- Main content -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- Box Comment -->
+                            <div class="card card-widget">
+                                <div class="card-header">
+                                    <div class="user-block">
+                                        <img class="img-circle" src="../dist/img/user1-128x128.jpg" alt="User Image">
+                                        <span class="username">
+                                            <h4>{{ $item->estate }}</h4>
+                                        </span>
+                                        <span class="description"><strong>{{$item->listing_type}} | SGD {{$item->price}}</strong></span>
+                                        <!-- <span class="description">{{ $item->comm_structure }} | <strong>{{ $item->comm_percentage}}% comm</strong></span> -->
+                                    </div>
+                                    <!-- /.user-block -->
+                                    <div class="card-tools">
+                                        <!-- <button type="button" class="btn btn-tool" title="Mark as read">
+                                            <i class="far fa-circle"></i>
+                                        </button> -->
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <!-- <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                            <i class="fas fa-times"></i>
+                                        </button> -->
+                                    </div>
+                                    <!-- /.card-tools -->
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body">
+                                    <img class="img-fluid pad" src="../dist/img/photo2.png" alt="Photo">
+
+                                    <p>{{ $item->description}}</p>
+
+
+                                    <div class="card-footer card-comments">
+                                        <div class="card-comment">
+                                            <!-- User image -->
+                                            
+
+                                           
+                                                <span class="username">
+                                                    ID: {{$item->id}} | {{$item->property_type}} | {{$item->floor_size}} sqft
+                                                    <span class="text-muted float-right">published Date</span>
+                                                </span><!-- /.username -->
+                                                <h6>{{ $item->comm_structure }} | <strong>{{ $item->comm_percentage}}% comm</strong> </h6>
+                                            
+                                            <!-- /.comment-text -->
+                                        </div>
+                                        
+                                    </div>
+
+
+                                    <div class="float-right text-muted">
+                                        <a><button type="button" class="btn btn-success">Details</button></a>
+                                        <a><button type="button" class="btn btn-info">Edit</button></a>
+                                        <a><button type="button" class="btn btn-danger">Delet</button></a>
+                                    </div>
+
+
+                                    <!-- <span class="float-right text-muted">127 likes - 3 comments</span> -->
+                                </div>
+                                <!-- /.card-body -->
+
+
+
+                                <!-- /.card-footer -->
+
+                                <!-- /.card-footer -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <!-- /.col -->
+
+
+
+
+
+
+
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                    <!-- /.content -->
+                    @endforeach
+
                 </div><!-- /.container-fluid -->
             </div>
             <!-- /.content-header -->
 
 
 
-            <?php
-
-            use App\Models\AccountDetails;
-
-            $check = null;
-
-            $idt = Auth::user()->id;
-
-            $account_history = AccountDetails::where('main_id', $idt)->get();
-            ?>
-
-            @foreach ($account_history as $item)
-            <?php $check = $item->main_id; ?>
-            @endforeach
-
-            @foreach ($account_history as $item)
-            <!-- Main content -->
-            
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <!-- /.content -->
-            @endforeach
         </div>
         <!-- /.content-wrapper -->
-        <footer class="main-footer">
-            <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-            All rights reserved.
-            <div class="float-right d-none d-sm-inline-block">
-                <b>Version</b> 3.2.0
-            </div>
-        </footer>
+
 
         <!-- Control Sidebar -->
         <aside class="control-sidebar control-sidebar-dark">
