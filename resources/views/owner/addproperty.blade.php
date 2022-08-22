@@ -75,7 +75,7 @@
                                             <input type="hidden" value="{{ Auth::user()->id }}" name="user_id">
                                             <label for="exampleSelectBorder">Property Type</code></label>
 
-                                            <select class="custom-select form-control-border" id="exampleSelectBorder" name="property_type">
+                                            <select class="custom-select form-control-border" id="exampleSelectBorder" name="property_type" required>
                                                 <option value="">Select One</option>
                                                 <option value="Residential - Landed">Residential - Landed</option>
                                                 <option value="Residential - Condominium">Residential - Condominium</option>
@@ -87,7 +87,7 @@
 
                                         <div class="form-group">
                                             <label for="exampleSelectBorder">Estate</code></label>
-                                            <select class="custom-select form-control-border" id="exampleSelectBorder" name="estate">
+                                            <select class="custom-select form-control-border" id="exampleSelectBorder" name="estate" required>
                                                 <option value="">Select One</option>
                                                 <option value="Sembawang - North">Sembawang - North</option>
                                                 <option value="Woodlands - North">Woodlands - North</option>
@@ -120,7 +120,7 @@
 
                                         <div class="form-group">
                                             <label for="exampleSelectBorder">Districts</code></label>
-                                            <select class="custom-select form-control-border" id="exampleSelectBorder" name="district">
+                                            <select class="custom-select form-control-border" id="exampleSelectBorder" name="district" required>
                                                 <option value="">Select One</option>
                                                 <option value="Boat Quay, Chinatown,City - Business District">
                                                     Boat Quay, Chinatown,
@@ -211,12 +211,12 @@
 
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Name of Property</label>
-                                            <input type="text" class="form-control" placeholder="Enter property Name" name="property_name">
+                                            <input type="text" class="form-control" placeholder="Enter property Name" name="property_name" required>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Address</label>
-                                            <input type="text" class="form-control" placeholder="Enter property Address" name="address">
+                                            <input type="text" class="form-control" placeholder="Enter property Address" name="address" required>
                                         </div>
 
                                         <div class="form-group">
@@ -269,7 +269,7 @@
 
                                         <div class="form-group">
                                             <label for="exampleSelectBorder">Listing Type</code></label>
-                                            <select class="custom-select form-control-border" id="exampleSelectBorder" name="listing_type">
+                                            <select class="custom-select form-control-border" id="exampleSelectBorder" name="listing_type" required>
                                                 <option>Select One</option>
                                                 <option>For Sale</option>
                                                 <option>For Rent</option>
@@ -287,7 +287,7 @@
                                                         <div class="input-group-prepend">
                                                             <span class="input-group-text">SGD</span>
                                                         </div>
-                                                        <input type="text" class="form-control" placeholder="Enter Price" name="price">
+                                                        <input type="text" class="form-control" placeholder="Enter Price" name="price" required>
                                                         <div class="input-group-append">
                                                         </div>
                                                     </div>
@@ -297,7 +297,7 @@
                                                 <div class="form-group">
                                                     <div class="form-group">
                                                         <label for="exampleSelectBorder">Price Type</code></label>
-                                                        <select class="custom-select form-control-border" id="exampleSelectBorder" name="price_type">
+                                                        <select class="custom-select form-control-border" id="exampleSelectBorder" name="price_type" required>
                                                             <option>Select One</option>
                                                             <option value="Starting From">Starting From</option>
                                                             <option value="View to Offer">View to Offer</option>
@@ -319,7 +319,7 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text">$SGD</span>
                                             </div>
-                                            <input type="text" class="form-control" placeholder="Enter Maintenance Fee per Month" name="maintenance_fee">
+                                            <input type="text" class="form-control" placeholder="Enter Maintenance Fee per Month" name="maintenance_fee" required>
                                             <div class="input-group-append">
                                             </div>
                                         </div>
@@ -366,14 +366,14 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text">sqft</span>
                                             </div>
-                                            <input type="text" class="form-control" placeholder="Enter Floor Size" name="floor_size">
+                                            <input type="text" class="form-control" placeholder="Enter Floor Size" name="floor_size" required>
                                             <div class="input-group-append">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="exampleSelectBorder">Floor Level</code></label>
-                                            <select class="custom-select form-control-border" id="exampleSelectBorder" name="floor_level">
+                                            <select class="custom-select form-control-border" id="exampleSelectBorder" name="floor_level" required>
                                                 <option>Select One</option>
                                                 <option value="Ground">Ground</option>
                                                 <option value="2nd Floor">2nd Floor</option>
@@ -390,7 +390,7 @@
 
                                         <div class="form-group">
                                             <label for="exampleSelectBorder">Currently Tenanted</code></label>
-                                            <select class="custom-select form-control-border" id="exampleSelectBorder" name="currently_tenanted">
+                                            <select class="custom-select form-control-border" id="exampleSelectBorder" name="currently_tenanted" required>
                                                 <option>Select One</option>
                                                 <option value="Yes">Yes</option>
                                                 <option value="No">No</option>
@@ -399,7 +399,7 @@
 
                                         <div class="form-group">
                                             <label for="exampleSelectBorder">Furnishing</code></label>
-                                            <select class="custom-select form-control-border" id="exampleSelectBorder" name="furnishing">
+                                            <select class="custom-select form-control-border" id="exampleSelectBorder" name="furnishing" required>
                                                 <option>Select One</option>
                                                 <option value="Fully Furnished">Fully Furnished</option>
                                                 <option value="50% Furnished">50% Furnished</option>
@@ -411,72 +411,72 @@
                                                 <!-- text input -->
                                                 <div class="form-group">
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="option1" name="furnishing_material[]" checked>
-                                                        <label for="customCheckbox1" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="Audio System" name="furnishing_material[]" checked>
+                                                        <label for="customCheckbox1" class="custom-control-label">Audio System</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox2" value="option2" name="furnishing_material[]">
-                                                        <label for="customCheckbox2" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox2" value="Bed" name="furnishing_material[]">
+                                                        <label for="customCheckbox2" class="custom-control-label">Bed</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox3" value="option3" name="furnishing_material[]">
-                                                        <label for="customCheckbox3" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox3" value="Cable TV" name="furnishing_material[]">
+                                                        <label for="customCheckbox3" class="custom-control-label">Cable TV</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="option4" name="furnishing_material[]">
-                                                        <label for="customCheckbox4" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox4" value="DVD Player" name="furnishing_material[]">
+                                                        <label for="customCheckbox4" class="custom-control-label">DVD Player</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox5" value="option5" name="furnishing_material[]">
-                                                        <label for="customCheckbox5" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox5" value="Dining Room Furniture" name="furnishing_material[]">
+                                                        <label for="customCheckbox5" class="custom-control-label">Dining Room Furniture</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox6" value="option1" name="furnishing_material[]">
-                                                        <label for="customCheckbox6" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox6" value="Dishwasher" name="furnishing_material[]">
+                                                        <label for="customCheckbox6" class="custom-control-label">Dishwasher</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox7" value="option1" name="furnishing_material[]">
-                                                        <label for="customCheckbox7" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox7" value="Dryer" name="furnishing_material[]">
+                                                        <label for="customCheckbox7" class="custom-control-label">Dryer</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox8" value="option1" name="furnishing_material[]">
-                                                        <label for="customCheckbox8" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox8" value="Fridge" name="furnishing_material[]">
+                                                        <label for="customCheckbox8" class="custom-control-label">Fridge</label>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6">
                                                 <div class="form-group">
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox9" value="option1" name="furnishing_material[]">
-                                                        <label for="customCheckbox9" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox9" value="Internet Connection" name="furnishing_material[]">
+                                                        <label for="customCheckbox9" class="custom-control-label">Internet Connection</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox10" value="option1" name="furnishing_material[]">
-                                                        <label for="customCheckbox10" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox10" value="Iron / Ironing Board" name="furnishing_material[]">
+                                                        <label for="customCheckbox10" class="custom-control-label">Iron / Ironing Board</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox11" value="option2" name="furnishing_material[]">
-                                                        <label for="customCheckbox11" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox11" value="Kitchen Utensils" name="furnishing_material[]">
+                                                        <label for="customCheckbox11" class="custom-control-label">Kitchen Utensils</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox12" value="option3" name="furnishing_material[]">
-                                                        <label for="customCheckbox12" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox12" value="Living Room Furniture" name="furnishing_material[]">
+                                                        <label for="customCheckbox12" class="custom-control-label">Living Room Furniture</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox13" value="option4" name="furnishing_material[]">
-                                                        <label for="customCheckbox13" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox13" value="Oven / Microwave" name="furnishing_material[]">
+                                                        <label for="customCheckbox13" class="custom-control-label">Oven / Microwave</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox14" value="option5" name="furnishing_material[]">
-                                                        <label for="customCheckbox14" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox14" value="Television" name="furnishing_material[]">
+                                                        <label for="customCheckbox14" class="custom-control-label">Television</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox15" value="option1" name="furnishing_material[]">
-                                                        <label for="customCheckbox15" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox15" value="Vacuum Cleaner" name="furnishing_material[]">
+                                                        <label for="customCheckbox15" class="custom-control-label">Vacuum Cleaner</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox16" value="option1" name="furnishing_material[]">
-                                                        <label for="customCheckbox16" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox16" value="Washing Machine" name="furnishing_material[]">
+                                                        <label for="customCheckbox16" class="custom-control-label">Washing Machine</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -487,12 +487,12 @@
 
                                         <div class="form-group">
                                             <label for="exampleInputEmail1">Headline</label>
-                                            <input type="text" class="form-control" placeholder="Enter Headline" name="headline">
+                                            <input type="text" class="form-control" placeholder="Enter Headline" name="headline" required>
                                         </div>
 
                                         <div class="form-group">
                                             <label>Description</label>
-                                            <textarea class="form-control" rows="3" placeholder="Enter ..." name="description"></textarea>
+                                            <textarea class="form-control" rows="3" placeholder="Enter ..." name="description" required></textarea>
                                         </div>
 
                                         <label>Unit Features</label>
@@ -501,64 +501,64 @@
                                                 <!-- text input -->
                                                 <div class="form-group">
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox17" value="option1" name="unit_features[]" checked>
-                                                        <label for="customCheckbox17" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox17" value="Air-conditioning" name="unit_features[]" checked>
+                                                        <label for="customCheckbox17" class="custom-control-label">Air-conditioning</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox18" value="option2" name="unit_features[]">
-                                                        <label for="customCheckbox18" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox18" value="Balcony" name="unit_features[]">
+                                                        <label for="customCheckbox18" class="custom-control-label">Balcony</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox19" value="option3" name="unit_features[]">
-                                                        <label for="customCheckbox19" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox19" value="Cooker Hob/Hood" name="unit_features[]">
+                                                        <label for="customCheckbox19" class="custom-control-label">Cooker Hob/Hood</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox20" value="option4" name="unit_features[]">
-                                                        <label for="customCheckbox20" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox20" value="Corner Unit" name="unit_features[]">
+                                                        <label for="customCheckbox20" class="custom-control-label">Corner Unit</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox21" value="option4" name="unit_features[]">
-                                                        <label for="customCheckbox21" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox21" value="High Floor" name="unit_features[]">
+                                                        <label for="customCheckbox21" class="custom-control-label">High Floor</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox22" value="option1" name="unit_features[]">
-                                                        <label for="customCheckbox22" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox22" value="Bathtub" name="unit_features[]">
+                                                        <label for="customCheckbox22" class="custom-control-label">Bathtub</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox23" value="option2" name="unit_features[]">
-                                                        <label for="customCheckbox23" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox23" value="Bombshelter" name="unit_features[]">
+                                                        <label for="customCheckbox23" class="custom-control-label">Bombshelter</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox24" value="option3" name="unit_features[]">
-                                                        <label for="customCheckbox24" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox24" value="City View" name="unit_features[]">
+                                                        <label for="customCheckbox24" class="custom-control-label">City View</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox25" value="option4" name="unit_features[]">
-                                                        <label for="customCheckbox25" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox25" value="Colonial Building" name="unit_features[]">
+                                                        <label for="customCheckbox25" class="custom-control-label">Colonial Building</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox26" value="option4" name="unit_features[]">
-                                                        <label for="customCheckbox26" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox26" value="Garage" name="unit_features[]">
+                                                        <label for="customCheckbox26" class="custom-control-label">Garage</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox27" value="option1" name="unit_features[]">
-                                                        <label for="customCheckbox27" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox27" value="Ground Floor" name="unit_features[]">
+                                                        <label for="customCheckbox27" class="custom-control-label">Ground Floor</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox28" value="option2" name="unit_features[]">
-                                                        <label for="customCheckbox28" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox28" value="Hairdryer" name="unit_features[]">
+                                                        <label for="customCheckbox28" class="custom-control-label">Hairdryer</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox29" value="option3" name="unit_features[]">
-                                                        <label for="customCheckbox29" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox29" value="Jacuzzi" name="unit_features[]">
+                                                        <label for="customCheckbox29" class="custom-control-label">Jacuzzi</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox30" value="option4" name="unit_features[]">
-                                                        <label for="customCheckbox30" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox30" value="Lake View" name="unit_features[]">
+                                                        <label for="customCheckbox30" class="custom-control-label">Lake View</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox31" value="option4" name="unit_features[]">
-                                                        <label for="customCheckbox31" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox31" value="Low Floor" name="unit_features[]">
+                                                        <label for="customCheckbox31" class="custom-control-label">Low Floor</label>
                                                     </div>
 
                                                 </div>
@@ -566,64 +566,64 @@
                                             <div class="col-sm-6">
                                                 <div class="form-group">
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox32" value="option1" name="unit_features[]">
-                                                        <label for="customCheckbox32" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox32" value="Intercom" name="unit_features[]">
+                                                        <label for="customCheckbox32" class="custom-control-label">Intercom</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox33" value="option1" name="unit_features[]">
-                                                        <label for="customCheckbox33" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox33" value="Park/Greenery View" name="unit_features[]">
+                                                        <label for="customCheckbox33" class="custom-control-label">Park/Greenery View</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox34" value="option2" name="unit_features[]">
-                                                        <label for="customCheckbox34" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox34" value="Penthouse" name="unit_features[]">
+                                                        <label for="customCheckbox34" class="custom-control-label">Penthouse</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox35" value="option3" name="unit_features[]">
-                                                        <label for="customCheckbox35" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox35" value="Renovated" name="unit_features[]">
+                                                        <label for="customCheckbox35" class="custom-control-label">Renovated</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox36" value="option3" name="unit_features[]">
-                                                        <label for="customCheckbox36" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox36" value="Water Heater" name="unit_features[]">
+                                                        <label for="customCheckbox36" class="custom-control-label">Water Heater</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox37" value="option1" name="unit_features[]">
-                                                        <label for="customCheckbox37" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox37" value="Maidsroom" name="unit_features[]">
+                                                        <label for="customCheckbox37" class="custom-control-label">Maidsroom</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox38" value="option2" name="unit_features[]">
-                                                        <label for="customCheckbox38" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox38" value="Original Condition" name="unit_features[]">
+                                                        <label for="customCheckbox38" class="custom-control-label">Original Condition</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox39" value="option3" name="unit_features[]">
-                                                        <label for="customCheckbox39" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox39" value="Outdoor Patio" name="unit_features[]">
+                                                        <label for="customCheckbox39" class="custom-control-label">Outdoor Patio</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox40" value="option4" name="unit_features[]">
-                                                        <label for="customCheckbox40" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox40" value="Private Garden" name="unit_features[]">
+                                                        <label for="customCheckbox40" class="custom-control-label">Private Garden</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox41" value="option4" name="unit_features[]">
-                                                        <label for="customCheckbox41" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox41" value="Private Pool" name="unit_features[]">
+                                                        <label for="customCheckbox41" class="custom-control-label">Private Pool</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox42" value="option1" name="unit_features[]">
-                                                        <label for="customCheckbox42" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox42" value="Roof Terrace" name="unit_features[]">
+                                                        <label for="customCheckbox42" class="custom-control-label">Roof Terrace</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox43" value="option2" name="unit_features[]">
-                                                        <label for="customCheckbox43" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox43" value="Sea View" name="unit_features[]">
+                                                        <label for="customCheckbox43" class="custom-control-label">Sea View</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox44" value="option3" name="unit_features[]">
-                                                        <label for="customCheckbox44" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox44" value="Swimming Pool View" name="unit_features[]">
+                                                        <label for="customCheckbox44" class="custom-control-label">Swimming Pool View</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox45" value="option4" name="unit_features[]">
-                                                        <label for="customCheckbox45" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox45" value="Terrace" name="unit_features[]">
+                                                        <label for="customCheckbox45" class="custom-control-label">Terrace</label>
                                                     </div>
                                                     <div class="custom-control custom-checkbox">
-                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox46" value="option4" name="unit_features[]">
-                                                        <label for="customCheckbox46" class="custom-control-label">Custom Checkbox</label>
+                                                        <input class="custom-control-input" type="checkbox" id="customCheckbox46" value="Walk-in Wardrobe" name="unit_features[]">
+                                                        <label for="customCheckbox46" class="custom-control-label">Walk-in Wardrobe</label>
                                                     </div>
 
                                                 </div>
@@ -643,21 +643,21 @@
                                     </div>
                                     <!-- /.card-body -->
                                     <div class="card card-info">
-                    <div class="card-header">
-                        <h3 class="card-title">Media File</h3>
-                    </div>
-                    <div class="card-body">
-                        <div class="form-group">
-                            <label for="exampleInputFile">File input</label>
-                            <div class="input-group">
-                                <div class="custom-file">
-                                    <input type="file" class="form-control" name="file[]" multiple required>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.card-body -->
-                </div>
+                                        <div class="card-header">
+                                            <h3 class="card-title">Media File</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="form-group">
+                                                <label for="exampleInputFile">File input</label>
+                                                <div class="input-group">
+                                                    <div class="custom-file">
+                                                        <input type="file" class="form-control" name="file[]" multiple required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /.card-body -->
+                                    </div>
                                 </div>
                                 <!-- /.card -->
                                 <!-- /.card -->
@@ -671,7 +671,7 @@
                     </div>
                 </form>
                 <!-- Input addon -->
-                
+
             </section>
             <!-- /.content -->
         </div>

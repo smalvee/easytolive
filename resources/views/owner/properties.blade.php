@@ -66,7 +66,6 @@
                     ?>
 
 
-
                     @foreach ($owner_property_list as $item)
                     <!-- Main content -->
                     <div class="row">
@@ -75,30 +74,28 @@
                             <div class="card card-widget">
                                 <div class="card-header">
                                     <div class="user-block">
-                                        <img class="img-circle" src="../dist/img/user1-128x128.jpg" alt="User Image">
-                                        <span class="username">
-                                            <h4>{{ $item->estate }}</h4>
-                                        </span>
-                                        <span class="description"><strong>{{$item->listing_type}} | SGD {{$item->price}}</strong></span>
-                                        <!-- <span class="description">{{ $item->comm_structure }} | <strong>{{ $item->comm_percentage}}% comm</strong></span> -->
+                                        <!-- <img class="img-circle" src="../dist/img/user1-128x128.jpg" alt="User Image"> -->
+                                        <h4>{{ $item->estate }}</h4>
+                                        <span>{{$item->listing_type}} | SGD {{$item->price}}</span>
+
                                     </div>
                                     <!-- /.user-block -->
                                     <div class="card-tools">
-                                        <!-- <button type="button" class="btn btn-tool" title="Mark as read">
-                                            <i class="far fa-circle"></i>
-                                        </button> -->
                                         <button type="button" class="btn btn-tool" data-card-widget="collapse">
                                             <i class="fas fa-minus"></i>
                                         </button>
-                                        <!-- <button type="button" class="btn btn-tool" data-card-widget="remove">
-                                            <i class="fas fa-times"></i>
-                                        </button> -->
                                     </div>
                                     <!-- /.card-tools -->
                                 </div>
                                 <!-- /.card-header -->
                                 <div class="card-body">
-                                    <img class="img-fluid pad" src="../dist/img/photo2.png" alt="Photo">
+                                    <?php
+                                    $sample = $item->image;
+                                    $r = explode('|', $sample);
+
+                                    // die();
+                                    ?>
+                                    <img class="img-fluid pad" src="../uploads/property/<?php print_r($r[0]); ?>" alt="Photo">
 
                                     <p>{{ $item->description}}</p>
 
@@ -106,23 +103,23 @@
                                     <div class="card-footer card-comments">
                                         <div class="card-comment">
                                             <!-- User image -->
-                                            
 
-                                           
-                                                <span class="username">
-                                                    ID: {{$item->id}} | {{$item->property_type}} | {{$item->floor_size}} sqft
-                                                    <span class="text-muted float-right">published Date</span>
-                                                </span><!-- /.username -->
-                                                <h6>{{ $item->comm_structure }} | <strong>{{ $item->comm_percentage}}% comm</strong> </h6>
-                                            
+
+
+                                            <span class="username">
+                                                ID: {{$item->id}} | {{$item->property_type}} | {{$item->floor_size}} sqft
+                                                <span class="text-muted float-right">published Date</span>
+                                            </span><!-- /.username -->
+                                            <h6>{{ $item->comm_structure }} | <strong>{{ $item->comm_percentage}}% comm</strong> </h6>
+
                                             <!-- /.comment-text -->
                                         </div>
-                                        
+
                                     </div>
 
 
                                     <div class="float-right text-muted">
-                                        <a><button type="button" class="btn btn-success">Details</button></a>
+                                        <a href="/propertydetails/{{$item->id}}"><button type="button" class="btn btn-success">Details</button></a>
                                         <a><button type="button" class="btn btn-info">Edit</button></a>
                                         <a><button type="button" class="btn btn-danger">Delet</button></a>
                                     </div>

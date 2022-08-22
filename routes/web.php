@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AccountDetailsController;
 use App\Http\Controllers\CreatelistingController;
 use App\Http\Controllers\PropertyController;
+use App\Http\Controllers\PropertyDetails;
 use App\Models\Createlisting;
 use GuzzleHttp\Middleware;
 
@@ -29,7 +30,7 @@ Route::get('/dashboard', function () {
 
 //auth rout for all
 Route::group(['middleware' => ['auth']], function() {
-    Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
+    Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')->name('dashboard'); 
 });
 
 
@@ -45,6 +46,8 @@ Route::post('account_photo_update', [AccountDetailsController::class, 'profile_p
 
 Route::get('addproperty/{id}', [PropertyController::class, 'index'])->middleware(['auth']);
 Route::get('properties/{id}', [PropertyController::class, 'show'])->middleware(['auth']);
+
+Route::get('propertydetails/{id}', [PropertyDetails::class, 'index'])->middleware(['auth']);
 
 
 Route::get('createlisting/{id}', [CreatelistingController::class, 'index'])->middleware(['auth']);
