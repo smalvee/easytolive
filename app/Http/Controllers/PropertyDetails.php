@@ -56,7 +56,7 @@ class PropertyDetails extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('owner.editproperty', compact('id'));
     }
 
     /**

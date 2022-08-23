@@ -360,7 +360,7 @@
                                     </li>
                                 </ul> -->
                                 <div class="text-center mt-5 mb-3">
-                                    <a href="#" class="btn btn-sm btn-primary">Edit</a>
+                                    <a href="/editproperty/{{ $item->id }}" class="btn btn-sm btn-primary">Edit</a>
                                     <a href="#" class="btn btn-sm btn-warning">Delete</a>
                                 </div>
                             </div>
