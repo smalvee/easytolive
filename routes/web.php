@@ -49,6 +49,8 @@ Route::get('properties/{id}', [PropertyController::class, 'show'])->middleware([
 
 Route::get('propertydetails/{id}', [PropertyDetails::class, 'index'])->middleware(['auth']);
 Route::get('editproperty/{id}', [PropertyDetails::class, 'edit'])->middleware(['auth']);
+Route::post('property_photo_update', [PropertyDetails::class, 'photo_update'])->middleware(['auth']);
+Route::post('property_info_update', [PropertyDetails::class, 'info_update'])->middleware(['auth']);
 
 
 Route::get('createlisting/{id}', [CreatelistingController::class, 'index'])->middleware(['auth']);

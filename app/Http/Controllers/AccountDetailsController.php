@@ -77,7 +77,7 @@ class AccountDetailsController extends Controller
      * @param  \App\Models\AccountDetails  $accountDetails
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, AccountDetails $accountDetails)
+    public function update(Request $request, AccountDetails $accountDetails) 
     {
 
         $accountDetails = AccountDetails::where('main_id',$request->main_id)->first();
