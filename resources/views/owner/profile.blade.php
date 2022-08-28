@@ -151,22 +151,17 @@
                                 <div class="card-header p-2">
                                     <ul class="nav nav-pills">
                                         <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Account Details</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab">Profile Photo</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab">Profile Photo</a></li>                                     
 
+                                        <?php
+                                        if ($check != NULL) { ?>
 
-                                        <form action="{{ url('account') }}" method="POST" enctype="multipart/form-data">
-                                            @csrf
+                                            <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Edit Profile</a></li>
+                                        <?php } else { ?>
+                                            <li class="nav-item"><a class="nav-link" data-toggle="tab">Enable Edit</a></li>
+                                        <?php }
+                                        ?>
 
-                                            <input type="hidden" value="{{ Auth::user()->id }}" name="main_id">
-
-                                            <?php
-                                            if ($check == NULL) { ?>
-                                                <li class="nav-item"><a type="submit" class="nav-link" data-toggle="tab">Enable Edit</a></li>
-                                            <?php } else { ?>
-                                                <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Edit Profile</a></li>
-                                            <?php }
-                                            ?>
-                                        </form>
 
 
 
@@ -311,7 +306,7 @@
                                                         <div class="card-body">
                                                             <div>
                                                                 <label>Title</label>
-                                                                <select class="form-control" name="title">
+                                                                <select class="form-control" name="title" required>
                                                                     <option value="{{ $item->title }}">{{ $item->title }}</option>
                                                                     <option value="Mr.">Mr.</option>
                                                                     <option value="Miss">Miss</option>

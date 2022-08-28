@@ -658,6 +658,9 @@
                                         </div>
                                         <!-- /.card-body -->
                                     </div>
+                                    <!--  -->
+
+                                    <input name="created_at" value="{{ date('d-month-Y')}}">
                                 </div>
                                 <!-- /.card -->
                                 <!-- /.card -->
