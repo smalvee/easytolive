@@ -151,7 +151,7 @@
                                 <div class="card-header p-2">
                                     <ul class="nav nav-pills">
                                         <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Account Details</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab">Profile Photo</a></li>                                     
+                                        <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab">Profile Photo</a></li>
 
                                         <?php
                                         if ($check != NULL) { ?>
