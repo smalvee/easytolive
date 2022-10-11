@@ -108,7 +108,7 @@
 
                                             <span class="username">
                                                 ID: {{$item->id}} | {{$item->property_type}} | {{$item->floor_size}} sqft
-                                                <span class="text-muted float-right">published Date</span>
+                                                <span class="text-muted float-right">published Date: {{$item->created_at}}</span>
                                             </span><!-- /.username -->
                                             <h6>{{ $item->comm_structure }} | <strong>{{ $item->comm_percentage}}% comm</strong> </h6>
 
@@ -116,9 +116,29 @@
                                         </div>
 
                                     </div>
+                                    <?php
+                                    if ($item->status == "Pending") {
+                                        $color = "coral";
+                                    } else if ($item->status == "Approved") {
+                                        $color = "green";
+                                    } else if ($item->status == "Rejected") {
+                                        $color = "crimson";
+                                    }
+
+                                    //echo($color);
+                                    // die();
+                                    
+                                    ?>
+
+
+
+
+
+                                    <p style="float:left; color:   <?php echo($color); ?>;"><strong>Status: {{ $item->status}}</strong></button></p>
 
 
                                     <div class="float-right text-muted">
+                                        
                                         <a href="/propertydetails/{{$item->id}}"><button type="button" class="btn btn-success">Details</button></a>
                                         <a><button type="button" class="btn btn-info">Edit</button></a>
                                         <a><button type="button" class="btn btn-danger">Delet</button></a>

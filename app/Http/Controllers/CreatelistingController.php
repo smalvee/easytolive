@@ -100,8 +100,7 @@ class CreatelistingController extends Controller
             $createListing['image'] = implode("|", $images);
 
             $createListing->unique_id          = $request->input('unique_id');
-            $createListing->created_at         = $request->input('created_at');
-            $createListing->updated_at         = $request->input('updated_at');
+            $createListing->status             = $request->input('status');
             $createListing->save();
             return redirect()->back()->with('status', 'Save seccessfully');
 

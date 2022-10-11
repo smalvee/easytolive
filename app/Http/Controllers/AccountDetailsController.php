@@ -12,9 +12,19 @@ class AccountDetailsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+    public function admin_index($id)
+    {
+        return view('admin.profile', compact('id'));
+    }
+
+    public function owner_index($id)
     {
         return view('owner.profile', compact('id'));
+    }
+
+    public function user_index($id)
+    {
+        return view('user.profile', compact('id'));
     }
 
     /**

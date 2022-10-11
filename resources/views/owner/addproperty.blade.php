@@ -660,7 +660,7 @@
                                     </div>
                                     <!--  -->
 
-                                    <input name="created_at" value="{{ date('d-month-Y')}}">
+                                    <input type="hidden" name="status" value="Pending">
                                 </div>
                                 <!-- /.card -->
                                 <!-- /.card -->

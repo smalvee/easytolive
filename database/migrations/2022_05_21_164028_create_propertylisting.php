@@ -45,6 +45,7 @@ return new class extends Migration
             $table->string('agent_number')->nullable();
             $table->string('image')->nullable();
             $table->string('unique_id')->nullable();
+            $table->string('status')->nullable();
             $table->timestamps();
         });
     }

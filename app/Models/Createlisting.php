@@ -40,6 +40,7 @@ class Createlisting extends Model
         'agent_number',
         'image',
         'unique_id',
+        'status',
         'created_at',
         'updated_at',
     ];
