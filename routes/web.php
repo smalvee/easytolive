@@ -6,6 +6,7 @@ use App\Http\Controllers\CreatelistingController;
 use App\Http\Controllers\OperationController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\PropertyDetails;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\WishlistController;
 use App\Models\Createlisting;
 use GuzzleHttp\Middleware;
@@ -71,6 +72,8 @@ Route::get('rejected_properties', [OperationController::class, 'rejected_propert
 Route::post('status_update', [OperationController::class, 'status_update'])->middleware(['auth']);
 
 Route::post('add_wish', [WishlistController::class, 'store'])->middleware(['auth']);
+
+Route::get('view_details/{id}', [UserController::class, 'view'])->middleware(['auth']);
 
 
 require __DIR__.'/auth.php';

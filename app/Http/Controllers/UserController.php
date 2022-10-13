@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Wish_list;
 use Illuminate\Http\Request;
 
-class WishlistController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +13,7 @@ class WishlistController extends Controller
      */
     public function index()
     {
-        
+        //
     }
 
     /**
@@ -35,13 +34,7 @@ class WishlistController extends Controller
      */
     public function store(Request $request)
     {
-        $wish_list = new Wish_list();
-
-        $wish_list->user_id            = $request->input('user_id');
-        $wish_list->listing_id         = $request->input('listing_id');
-
-        $wish_list->save();
-        return redirect()->back()->with('status', 'Add seccessfully');
+        //
     }
 
     /**
@@ -87,5 +80,12 @@ class WishlistController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+
+    public function view($id)
+    {
+        return view('user.view_details', compact('id'));
     }
 }

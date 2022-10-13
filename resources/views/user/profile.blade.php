@@ -61,6 +61,7 @@
             <?php
 
             use App\Models\AccountDetails;
+            use Illuminate\Support\Facades\Auth;
 
             $check = null;
 

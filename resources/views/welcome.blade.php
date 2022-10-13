@@ -175,7 +175,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     </div>
                                     <div class="card-footer">
                                         <div class="text-right">
-                                            <a href="#" class="btn btn-sm btn-primary">
+                                            <a href="/view_details/{{$item->id}}" class="btn btn-sm btn-primary">
                                                 </i> View Details
                                             </a>
                                         </div>
