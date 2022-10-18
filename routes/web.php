@@ -72,6 +72,8 @@ Route::get('rejected_properties', [OperationController::class, 'rejected_propert
 Route::post('status_update', [OperationController::class, 'status_update'])->middleware(['auth']);
 
 Route::post('add_wish', [WishlistController::class, 'store'])->middleware(['auth']);
+Route::get('wish_list', [WishlistController::class, 'index'])->middleware(['auth']);
+Route::get('delete_wish/{id}', [WishlistController::class, 'destroy'])->middleware(['auth']);
 
 Route::get('view_details/{id}', [UserController::class, 'view'])->middleware(['auth']);
 

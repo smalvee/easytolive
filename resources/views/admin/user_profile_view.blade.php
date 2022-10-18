@@ -100,9 +100,7 @@
         </div>
         <!-- /.content-wrapper -->
 
-        <footer class="main-footer">
-
-        </footer>
+        @include('admin.footer')
 
         <!-- Control Sidebar -->
         <aside class="control-sidebar control-sidebar-dark">

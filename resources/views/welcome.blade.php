@@ -137,7 +137,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
                             @foreach ($property_list as $item)
-                            
+
                             <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
                                 <div class="card bg-light d-flex flex-fill">
                                     <div class="card-header text-muted border-bottom-0">
@@ -168,9 +168,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     </li>
                                                 </ul>
                                             </div>
+
+
                                             <div class="col-5 text-center">
-                                                <img src="../../dist/img/user1-128x128.jpg" alt="user-avatar" class="img-circle img-fluid" />
+                                                <?php
+
+
+                                                $sample = $item->image;
+                                                $r = explode('|', $sample);
+
+                                                for ($i = 0; $i < 1; $i++) {
+                                                    $image = $r[0];
+                                                }
+                                                ?>
+                                                <!-- <img src="../uploads/property/<?php echo ($image) ?>" alt="user-avatar" style="img-circle img-fluid" /> -->
+                                                <img src="../uploads/property/<?php echo ($image) ?>" alt="user-avatar" style="height:100%; width:100%" />
                                             </div>
+
                                         </div>
                                     </div>
                                     <div class="card-footer">
@@ -182,7 +196,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     </div>
                                 </div>
                             </div>
+
                             @endforeach
+
+
 
 
 
@@ -208,12 +225,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
         <!-- Main Footer -->
         <footer class="main-footer">
-            <!-- To the right -->
-            <div class="float-right d-none d-sm-inline">
-                Anything you want
+            <strong>Copyright &copy; 2021-2022 <a href="https://smalvee.me">SM Alvee</a>.</strong>
+            All rights reserved.
+            <div class="float-right d-none d-sm-inline-block">
+                <b>Version</b> 2.0
             </div>
-            <!-- Default to the left -->
-            <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
         </footer>
     </div>
     <!-- ./wrapper -->

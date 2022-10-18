@@ -91,12 +91,13 @@
                                         ?>
                                         @foreach ($account_history as $item)
                                         <img class="profile-user-img img-fluid img-circle" src="../uploads/profile/{{ $item->profile_picture }}" alt="User profile picture">
-                                        @endforeach
+                                        
                                     </div>
 
-                                    <h3 class="profile-username text-center">Nina Mcintire</h3>
+                                    <h3 class="profile-username text-center">{{$item->title}} {{$item->first_name}} {{$item->last_name}}</h3>
 
                                     <p class="text-muted text-center">Software Engineer</p>
+                                    @endforeach
                                     <form action="{{ url('account') }}" method="POST" enctype="multipart/form-data">
                                         @csrf
 
@@ -126,20 +127,20 @@
                                     <strong><i class="fas fa-user"></i> Family</strong>
 
                                     <p class="text-muted">
-                                        B.S. in Computer Science from the University of Tennessee at Knoxville
+                                        
                                     </p>
 
                                     <hr>
 
                                     <strong><i class="fas fa-map-marker-alt mr-1"></i> Location</strong>
 
-                                    <p class="text-muted">Malibu, California</p>
+                                    <p class="text-muted">Dhaka, Bangladesh</p>
 
                                     <hr>
 
                                     <strong><i class="far fa-file-alt mr-1"></i> Notes</strong>
 
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fermentum enim neque.</p>
+                                    <p class="text-muted"></p>
                                 </div>
                                 <!-- /.card-body -->
                             </div>
@@ -393,13 +394,7 @@
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
-        <footer class="main-footer">
-            <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-            All rights reserved.
-            <div class="float-right d-none d-sm-inline-block">
-                <b>Version</b> 3.2.0
-            </div>
-        </footer>
+        @include('admin.footer')
 
         <!-- Control Sidebar -->
         <aside class="control-sidebar control-sidebar-dark">

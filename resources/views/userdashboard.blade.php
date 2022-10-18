@@ -56,17 +56,20 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
-      <a href="" class="brand-link">
-      <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">KGD Property</span>
-      </a>
+      <a href="http://127.0.0.1:8000/" class="brand-link">
+        <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">KGD</span>
+      </a>w
 
       <!-- Sidebar -->
       <div class="sidebar">
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          </div>
           <div class="info">
-            <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+            <a href="/userprofile/{{ Auth::user()->id }}" class="d-block">{{ Auth::user()->name }} (Renter)</a>
           </div>
         </div>
 
@@ -81,10 +84,11 @@
               <a href="/dashboard" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
-                  Dashboard
+                Dashboard
                 </p>
               </a>
             </li>
+
             <li class="nav-item">
               <a href="/userprofile/{{ Auth::user()->id }}" class="nav-link">
                 <i class="nav-icon far fa-user"></i>
@@ -94,72 +98,47 @@
               </a>
             </li>
 
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fa fa-university"></i>
+                <p>
+                Propertys
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="/wish_list" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Wish List</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="http://127.0.0.1:8000/" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>All</p>
+                  </a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a href="/pending_properties" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Pending</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/all_propertis" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>All</p>
+                  </a>
+                </li> -->
+              </ul>
+            </li>
 
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-edit"></i>
-                <p>
-                Property
-                  <i class="fas fa-angle-left right"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="/properties/{{ Auth::user()->id }}" class="nav-link">
-                    <i class="fa fa-university"></i>
-                    <p>View Property</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="/addproperty/{{ Auth::user()->id }}" class="nav-link">
-                    <i class="fa fa-university"></i>
-                    <p>Add Property</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="pages/forms/editors.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Editors</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="pages/forms/validation.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Validation</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-table"></i>
-                <p>
-                  Tables
-                  <i class="fas fa-angle-left right"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="pages/tables/simple.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Simple Tables</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="pages/tables/data.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>DataTables</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="pages/tables/jsgrid.html" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>jsGrid</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-header">EXAMPLES</li>
+            
+
+            
+            
+            <li class="nav-header">Others</li>
             <li class="nav-item">
               <a href="pages/calendar.html" class="nav-link">
                 <i class="nav-icon far fa-calendar-alt"></i>
@@ -175,7 +154,7 @@
               <form method="POST" action="{{ route('logout') }}">
                       @csrf
                       <i class="fa fa-share-square nav-icon"></i>
-                      <button style="background: transparent; border: transparent; color:beige;">Logout</button>
+                      <button style="border: none; background:transparent; color:#C2C7D0">Logout</button>
                     </form>
               </a>
             </li>
@@ -302,10 +281,10 @@
     </div>
     <!-- /.content-wrapper -->
     <footer class="main-footer">
-      <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+      <strong>Copyright &copy; 2021-2022 <a href="https://smalvee.me">SM Alvee</a>.</strong>
       All rights reserved.
       <div class="float-right d-none d-sm-inline-block">
-        <b>Version</b> 3.2.0
+        <b>Version</b> 2.0
       </div>
     </footer>
 

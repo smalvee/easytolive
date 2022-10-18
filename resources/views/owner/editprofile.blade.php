@@ -227,9 +227,7 @@
                 </div>
 
             </div>
-            <footer>
-                <p class="copyright">Designed by Webdorks</p>
-            </footer>
+            @include('admin.footer')
         </div>
     </section>
 

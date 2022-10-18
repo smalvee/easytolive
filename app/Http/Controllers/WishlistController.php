@@ -14,7 +14,7 @@ class WishlistController extends Controller
      */
     public function index()
     {
-        
+        return view("user.wish_list");
     }
 
     /**
@@ -86,6 +86,9 @@ class WishlistController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = Wish_list::find($id);
+        $data->delete();
+        return redirect()->back();
+
     }
 }

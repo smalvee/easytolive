@@ -393,6 +393,7 @@
                     </select>
                     <br>
                     <button class="btn btn-sm btn-primary">Update</button>
+                    <button class="btn btn-sm btn-danger">Delete</button>
                   </form>
                 </div>
                 @endforeach
@@ -413,6 +414,7 @@
 
 
     <!-- Control Sidebar -->
+    @include('admin.footer')
     <aside class="control-sidebar control-sidebar-dark">
       <!-- Control sidebar content goes here -->
     </aside>

@@ -379,7 +379,8 @@
                                         @foreach ($wish_list as $wish)
                                         <?php                                        
                                         if ($wish->user_id == $t && $wish->listing_id == $item->id) { ?>
-                                            <a class="btn btn-sm btn-primary">Added</a>
+                                            <a class="btn btn-sm btn-primary">Added to wish list</a>
+                                            <a href="/delete_wish/{{$wish->id}}" class="btn btn-sm btn-danger">Remove</a>
                                         <?php $evaluate = true;
                                         } ?>                                            
                                         @endforeach
@@ -410,7 +411,7 @@
 
 
 
-
+        @include('user.footer')
 
         <!-- Control Sidebar -->
         <aside class="control-sidebar control-sidebar-dark">
