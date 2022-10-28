@@ -11,11 +11,11 @@
   'use strict'
 
   setTimeout(function () {
-    if (window.___browserSync___ === undefined && Number(localStorage.getItem('AdminLTE:Demo:MessageShowed')) < Date.now()) {
-      localStorage.setItem('AdminLTE:Demo:MessageShowed', (Date.now()) + (15 * 60 * 1000))
-      // eslint-disable-next-line no-alert
-      alert('Welcome to the dashboard')
-    }
+    // if (window.___browserSync___ === undefined && Number(localStorage.getItem('AdminLTE:Demo:MessageShowed')) < Date.now()) {
+    //   localStorage.setItem('AdminLTE:Demo:MessageShowed', (Date.now()) + (15 * 60 * 1000))
+    //   // eslint-disable-next-line no-alert
+    //   alert('Welcome to the dashboard')
+    // }
   }, 1000)
 
   function capitalizeFirstLetter(string) {
@@ -60,7 +60,7 @@
   // Checkboxes
 
   $container.append(
-    '<h5>Customize AdminLTE</h5><hr class="mb-2"/>'
+    '<h5>Customize AdminLTE</h5><hr class="mb-2"/>' 
   )
 
   var $dark_mode_checkbox = $('<input />', {

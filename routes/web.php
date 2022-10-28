@@ -57,6 +57,7 @@ Route::get('propertydetails/{id}', [PropertyDetails::class, 'index'])->middlewar
 Route::get('editproperty/{id}', [PropertyDetails::class, 'edit'])->middleware(['auth']);
 Route::post('property_photo_update', [PropertyDetails::class, 'photo_update'])->middleware(['auth']);
 Route::post('property_info_update', [PropertyDetails::class, 'info_update'])->middleware(['auth']);
+Route::get('delete_property/{id}', [PropertyDetails::class, 'destroy'])->middleware(['auth']);
 
 
 Route::get('createlisting/{id}', [CreatelistingController::class, 'index'])->middleware(['auth']);

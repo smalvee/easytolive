@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Createlisting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PropertyDetails extends Controller
 {
@@ -161,6 +162,8 @@ class PropertyDetails extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::delete('delete from propertylisting where id = ?',[$id]);
+        return redirect()->back()->with('status', 'Property Information Updated seccessfully');
+
     }
 }

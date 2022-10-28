@@ -59,7 +59,7 @@
       <a href="http://127.0.0.1:8000/" class="brand-link">
         <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light">KGD</span>
-      </a>w
+      </a>
 
       <!-- Sidebar -->
       <div class="sidebar">
@@ -78,13 +78,13 @@
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-            
+
 
             <li class="nav-item">
               <a href="/dashboard" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
-                Dashboard
+                  Dashboard
                 </p>
               </a>
             </li>
@@ -102,7 +102,7 @@
               <a href="#" class="nav-link">
                 <i class="nav-icon fa fa-university"></i>
                 <p>
-                Propertys
+                  Propertys
                   <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
@@ -134,10 +134,10 @@
               </ul>
             </li>
 
-            
 
-            
-            
+
+
+
             <li class="nav-header">Others</li>
             <li class="nav-item">
               <a href="pages/calendar.html" class="nav-link">
@@ -151,15 +151,15 @@
 
             <li class="nav-item">
               <a href="pages/calendar.html" class="nav-link">
-              <form method="POST" action="{{ route('logout') }}">
-                      @csrf
-                      <i class="fa fa-share-square nav-icon"></i>
-                      <button style="border: none; background:transparent; color:#C2C7D0">Logout</button>
-                    </form>
+                <form method="POST" action="{{ route('logout') }}">
+                  @csrf
+                  <i class="fa fa-share-square nav-icon"></i>
+                  <button style="border: none; background:transparent; color:#C2C7D0">Logout</button>
+                </form>
               </a>
             </li>
 
-          
+
 
 
 
@@ -197,7 +197,12 @@
 
 
 
+      <?php
+      use Illuminate\Support\Facades\DB;
+      use Illuminate\Support\Facades\Auth;
 
+      $wish_list = DB::select('SELECT * FROM wish where user_id = ?', [Auth::user()->id]);
+      ?>
 
 
       <!-- Main content -->
@@ -205,61 +210,24 @@
         <div class="container-fluid">
           <!-- Small boxes (Stat box) -->
           <div class="row">
-            <div class="col-lg-3 col-6">
-              <!-- small box -->
-              <div class="small-box bg-info">
-                <div class="inner">
-                  <h3>150</h3>
 
-                  <p>New Orders</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-bag"></i>
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-              </div>
-            </div>
+
+
+
+
+
+
             <!-- ./col -->
             <div class="col-lg-3 col-6">
               <!-- small box -->
-              <div class="small-box bg-success">
+              <div class="small-box bg-primary">
                 <div class="inner">
-                  <h3>53<sup style="font-size: 20px">%</sup></h3>
+                  <h3><?php echo count($wish_list);?></h3>
 
-                  <p>Bounce Rate</p>
+                  <p>Wish List</p>
                 </div>
                 <div class="icon">
-                  <i class="ion ion-stats-bars"></i>
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-              </div>
-            </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-              <!-- small box -->
-              <div class="small-box bg-warning">
-                <div class="inner">
-                  <h3>44</h3>
-
-                  <p>User Registrations</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-person-add"></i>
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-              </div>
-            </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-              <!-- small box -->
-              <div class="small-box bg-danger">
-                <div class="inner">
-                  <h3>65</h3>
-
-                  <p>Unique Visitors</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-pie-graph"></i>
+                  <i class=""></i>
                 </div>
                 <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
               </div>

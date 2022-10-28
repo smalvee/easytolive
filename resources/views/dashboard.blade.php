@@ -45,19 +45,17 @@
 
       <!-- Right navbar links -->
       <ul class="navbar-nav ml-auto">
-
-
-
-
       </ul>
     </nav>
+    <!-- Navbar -->
+   
     <!-- /.navbar -->
 
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
       <a href="index3.html" class="brand-link">
-        <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light">KGD</span>
       </a>
 
@@ -66,7 +64,7 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="image">
-            <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+            <img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
             <a href="#" class="d-block">{{ Auth::user()->name }} (Admin)</a>
@@ -78,19 +76,19 @@
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-            
+
 
             <li class="nav-item">
               <a href="/dashboard" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
-                Dashboard
+                  Dashboard
                 </p>
               </a>
             </li>
 
             <li class="nav-item">
-              <a href="admin_profile/{{ Auth::user()->id }}" class="nav-link">
+              <a href="/admin_profile/{{ Auth::user()->id }}" class="nav-link">
                 <i class="nav-icon far fa-user"></i>
                 <p>
                   Profile
@@ -98,16 +96,46 @@
               </a>
             </li>
 
+            <li class="nav-header">ADMINISTRATION</li>
+
             <li class="nav-item">
-              <a href="" class="nav-link">
-              <i class="nav-icon fa fa-university"></i>
+              <a href="/admin_profile/{{ Auth::user()->id }}" class="nav-link">
+                <i class="nav-icon fas fa-user-friends"></i>
                 <p>
-                  Propertys
+                  Add Admin
                 </p>
               </a>
             </li>
 
-            <li class="nav-header">ADMINISTRATION</li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fa fa-university"></i>
+                <p>
+                  Propertys
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="/rejected_properties" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Rejected</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/pending_properties" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Pending</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/all_propertis" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>All</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
 
             <li class="nav-item">
               <a href="#" class="nav-link">
@@ -139,7 +167,7 @@
               </ul>
             </li>
 
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-edit"></i>
                 <p>
@@ -173,8 +201,10 @@
                   </a>
                 </li>
               </ul>
-            </li>
-            <li class="nav-item">
+            </li> -->
+
+
+            <!-- <li class="nav-item">
               <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-table"></i>
                 <p>
@@ -202,10 +232,12 @@
                   </a>
                 </li>
               </ul>
-            </li>
+            </li> -->
+
+
             <li class="nav-header">EXAMPLES</li>
             <li class="nav-item">
-              <a href="pages/calendar.html" class="nav-link">
+              <a href="" class="nav-link">
                 <i class="nav-icon far fa-calendar-alt"></i>
                 <p>
                   Calendar
@@ -216,24 +248,13 @@
 
             <li class="nav-item">
               <a href="pages/calendar.html" class="nav-link">
-              <form method="POST" action="{{ route('logout') }}">
-                      @csrf
-                      <i class="fa fa-share-square nav-icon"></i>
-                      <button style="background: transparent; border: transparent; color:beige;">Logout</button>
-                    </form>
+                <form method="POST" action="{{ route('logout') }}">
+                  @csrf
+                  <i class="fa fa-share-square nav-icon"></i>
+                  <button style="border: none; background:transparent; color:#C2C7D0">Logout</button>
+                </form>
               </a>
             </li>
-
-          
-
-
-
-
-
-
-
-
-
           </ul>
         </nav>
         <!-- /.sidebar-menu -->
@@ -259,7 +280,18 @@
       </div>
       <!-- /.content-header -->
 
+<?php
 
+use Illuminate\Support\Facades\DB;
+
+$listing = DB::select('SELECT * FROM propertylisting');
+$owner = DB::select('SELECT * FROM role_user where role_id = ?', [2]);
+$tenant = DB::select('SELECT * FROM role_user where role_id = ?', [3]);
+$pending_list = DB::select('SELECT * FROM propertylisting where status = ?', ['Pending']);
+
+
+
+?>
 
 
 
@@ -270,63 +302,74 @@
         <div class="container-fluid">
           <!-- Small boxes (Stat box) -->
           <div class="row">
+
+
+
             <div class="col-lg-3 col-6">
               <!-- small box -->
               <div class="small-box bg-info">
                 <div class="inner">
-                  <h3>150</h3>
+                  <h3><?php echo count($listing);?></h3>
 
-                  <p>New Orders</p>
+                  <p>Total Listing</p>
                 </div>
                 <div class="icon">
-                  <i class="ion ion-bag"></i>
+                  <i class=""></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="/all_propertis" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
+
+
             <!-- ./col -->
             <div class="col-lg-3 col-6">
               <!-- small box -->
               <div class="small-box bg-success">
                 <div class="inner">
-                  <h3>53<sup style="font-size: 20px">%</sup></h3>
+                  <h3><?php echo count($owner);?><sup style="font-size: 20px"></sup></h3>
 
-                  <p>Bounce Rate</p>
+                  <p>Total Owner</p>
                 </div>
                 <div class="icon">
-                  <i class="ion ion-stats-bars"></i>
+                  <i class=""></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="/owner_history" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
+
+
+
             <!-- ./col -->
             <div class="col-lg-3 col-6">
               <!-- small box -->
               <div class="small-box bg-warning">
                 <div class="inner">
-                  <h3>44</h3>
+                  <h3><?php echo count($tenant);?></h3>
 
-                  <p>User Registrations</p>
+                  <p>Total Tenant</p>
                 </div>
                 <div class="icon">
-                  <i class="ion ion-person-add"></i>
+                  <i class=""></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="/renter_history" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
+
+
+
             <!-- ./col -->
             <div class="col-lg-3 col-6">
               <!-- small box -->
               <div class="small-box bg-danger">
                 <div class="inner">
-                  <h3>65</h3>
+                  <h3><?php echo count($pending_list);?></h3>
 
-                  <p>Unique Visitors</p>
+                  <p>Total Pending List</p>
                 </div>
                 <div class="icon">
-                  <i class="ion ion-pie-graph"></i>
+                  <i class=""></i>
                 </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="/pending_properties" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
             <!-- ./col -->

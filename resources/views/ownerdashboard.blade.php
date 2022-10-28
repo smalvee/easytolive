@@ -78,13 +78,13 @@
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-            
+
 
             <li class="nav-item">
               <a href="/dashboard" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
-                Dashboard
+                  Dashboard
                 </p>
               </a>
             </li>
@@ -99,7 +99,7 @@
             </li>
             <li class="nav-item">
               <a href="/properties/{{ Auth::user()->id }}" class="nav-link">
-              <i class="fa fa-university" aria-hidden="true"></i>
+                <i class="fa fa-university" aria-hidden="true"></i>
 
                 <p>
                   Propertys
@@ -185,15 +185,15 @@
 
             <li class="nav-item">
               <a href="pages/calendar.html" class="nav-link">
-              <form method="POST" action="{{ route('logout') }}">
-                      @csrf
-                      <i class="fa fa-share-square nav-icon"></i>
-                      <button style="background: transparent; border: transparent; color:beige;">Logout</button>
-                    </form>
+                <form method="POST" action="{{ route('logout') }}">
+                  @csrf
+                  <i class="fa fa-share-square nav-icon"></i>
+                  <button style="border: none; background:transparent; color:#C2C7D0">Logout</button>
+                </form>
               </a>
             </li>
 
-          
+
 
 
 
@@ -228,6 +228,21 @@
       </div>
       <!-- /.content-header -->
 
+      <?php
+
+      use Illuminate\Support\Facades\Auth;
+
+      $idt = Auth::user()->id;
+
+      use App\Models\Createlisting;
+      use Illuminate\Support\Facades\DB;
+
+
+      $all_listing = DB::select('SELECT * FROM propertylisting where user_id = ?', [$idt]);
+
+      ?>
+
+
 
 
 
@@ -243,9 +258,9 @@
               <!-- small box -->
               <div class="small-box bg-info">
                 <div class="inner">
-                  <h3>150</h3>
+                  <h3><?php echo count($all_listing); ?></h3>
 
-                  <p>New Orders</p>
+                  <p>Total Listing you post</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-bag"></i>
@@ -253,52 +268,6 @@
                 <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
               </div>
             </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-              <!-- small box -->
-              <div class="small-box bg-success">
-                <div class="inner">
-                  <h3>53<sup style="font-size: 20px">%</sup></h3>
-
-                  <p>Bounce Rate</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-stats-bars"></i>
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-              </div>
-            </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-              <!-- small box -->
-              <div class="small-box bg-warning">
-                <div class="inner">
-                  <h3>44</h3>
-
-                  <p>User Registrations</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-person-add"></i>
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-              </div>
-            </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-6">
-              <!-- small box -->
-              <div class="small-box bg-danger">
-                <div class="inner">
-                  <h3>65</h3>
-
-                  <p>Unique Visitors</p>
-                </div>
-                <div class="icon">
-                  <i class="ion ion-pie-graph"></i>
-                </div>
-                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-              </div>
-            </div>
-            <!-- ./col -->
           </div>
 
 
